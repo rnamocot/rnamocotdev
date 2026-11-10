@@ -1,0 +1,1002 @@
+# Renie Namocot: full content
+
+> Full-Stack Web Developer (WordPress & Shopify Developer) based in the Philippines. Contact: rnamocotdev@gmail.com. Website: https://rnamocotdev.com/
+
+
+## WordPress Development
+URL: https://rnamocotdev.com/services/wordpress-development/
+
+I'm a freelance WordPress developer who builds fast, secure and easy-to-edit WordPress websites, from marketing sites to complex platforms. I handle the theme, plugins, integrations, hosting and launch, so you work with one developer from start to finish.
+
+- Custom WordPress websites: Corporate, marketing and membership sites built around your content and your team's workflow.
+- Theme & plugin development: Hand-coded block themes and purpose-built plugins instead of a stack of bloated third-party add-ons.
+- Page builder sites: Elementor and Divi builds with global styles and reusable templates your team can safely edit.
+- WooCommerce stores: Online stores with custom product logic, payments, subscriptions and stock integrations.
+- Speed & Core Web Vitals: Audits and fixes for LCP, INP and CLS: caching, image pipelines, script control and lean markup.
+- Maintenance & security: Updates, backups, uptime monitoring, hardening and malware clean-up, with clear monthly reporting.
+
+Most WordPress sites slow down and break because they are assembled from dozens of plugins that were never designed to work together. I take the opposite approach. I keep the plugin list short, write custom code where it matters, and document everything so your site is still maintainable years from now.I work with businesses, agencies and founders in Australia, the United States, the United Kingdom, Germany, New Zealand and Singapore, collaborating remotely across time zones.
+
+Q: How much does a custom WordPress website cost?
+A: It depends on scope. A focused marketing site costs far less than a WooCommerce store or a headless build. After a short discovery call I send a fixed quote with a clear list of deliverables, so there are no surprises.
+Q: How long does a WordPress project take?
+A: Most marketing sites take 2–5 weeks from approved design to launch. E-commerce, membership and custom-integration projects usually take 4–10 weeks, depending on content and integrations.
+Q: Will I be able to edit the website myself?
+A: Yes. I build with the block editor, ACF or your preferred page builder, and every site comes with a short walkthrough video so your team can update content with confidence.
+Q: Do you work with agencies as a white-label developer?
+A: Yes. I regularly work as a white-label WordPress developer for agencies and follow your processes, tools and communication style.
+
+
+## Custom WordPress Themes
+URL: https://rnamocotdev.com/services/custom-wordpress-theme-development/
+
+I develop custom WordPress themes from scratch: lightweight block themes and classic themes built exactly to your design, with no unused code and nothing your team has to work around.
+
+- Block (FSE) themes: Full Site Editing themes with theme.json design tokens, templates, template parts and block patterns.
+- Custom Gutenberg blocks: React-based or ACF-powered blocks that match your design system and stay editable.
+- Classic & hybrid themes: Template-driven PHP themes when a project or legacy stack needs them.
+- Design system in code: Typography, colours and spacing defined once and applied everywhere, in Tailwind or plain CSS.
+- Accessibility built in: Semantic markup, keyboard support, contrast checks and WCAG 2.2 AA as the baseline.
+- Documentation & handover: A clean Git repository, a README, and editor guides for your content team.
+
+Pre-built themes ship with hundreds of features you will never use, and every one of them costs page speed. A custom theme only contains what your site needs. That usually means better Core Web Vitals, fewer conflicts and a back end your team understands.I can start from a Figma file, an existing site you want to rebuild, or a brief, and I'll design the layout system with you before writing code.
+
+Q: Block theme or classic theme: which is better in 2026?
+A: For most new builds I recommend a block theme with custom blocks. It is the direction WordPress core is moving and it gives editors the most flexibility. Classic themes still make sense for some legacy integrations.
+Q: Can you convert my existing theme to a custom one?
+A: Yes. I audit the current site, keep the URLs and SEO signals intact, and rebuild the front end as a lean custom theme.
+Q: Do I own the theme code?
+A: Yes. You receive the full source code and own it outright, with no licence fees and no lock-in.
+Q: Will a custom theme help my SEO?
+A: Indirectly, yes. Faster load times, clean heading structure, proper schema markup and good accessibility all support rankings and AI search visibility.
+
+
+## WordPress Plugin Development
+URL: https://rnamocotdev.com/services/wordpress-plugin-development/
+
+When an off-the-shelf plugin doesn't fit, I build one that does. I write custom WordPress plugins for business logic, third-party API integrations, WooCommerce extensions and admin tools, following WordPress coding standards with security in mind.
+
+- Bespoke functionality: Calculators, portals, directories, quote builders and anything else your business logic requires.
+- API integrations: Connect WordPress to CRMs, ERPs, shipping, payment and marketing platforms over REST or GraphQL.
+- WooCommerce extensions: Custom product types, pricing rules, checkout fields, fulfilment and reporting.
+- Custom REST endpoints: Secure endpoints for mobile apps, headless front ends and external systems.
+- Admin & dashboard tools: Settings pages, custom tables, bulk tools and reports that save your team hours.
+- Plugin fixes & refactoring: Debugging, PHP 8.x upgrades and performance refactors for existing plugins.
+
+Every plugin I build follows WordPress coding standards. Input is sanitised, output is escaped, requests are protected with nonces, capability checks are in place, and the code is organised so another developer can pick it up later.
+
+Q: Can you modify an existing plugin instead of building a new one?
+A: Often, yes. Where possible I extend plugins through hooks or a companion plugin so your changes survive updates.
+Q: Will my custom plugin break when WordPress updates?
+A: I build on stable core APIs and test against new WordPress and PHP versions. Ongoing maintenance plans are available.
+Q: Can you integrate WordPress with our internal system?
+A: Yes. If your system has an API, or even just a database or file export, I can usually build a reliable sync.
+Q: Do you publish plugins to the WordPress.org directory?
+A: I can prepare a plugin for submission, including readme, i18n and directory guidelines, if you want to release it publicly.
+
+
+## Headless WordPress
+URL: https://rnamocotdev.com/services/headless-wordpress-development/
+
+Headless WordPress uses WordPress only as the content editor and delivers the website through a separate front end, usually Next.js. The result is very fast pages, a smaller attack surface and complete design freedom, while editors keep the WordPress dashboard they already know.
+
+- Architecture & planning: Content modelling, data fetching strategy and the right rendering mix of SSG, ISR and SSR.
+- WPGraphQL & REST APIs: Typed schemas, custom fields exposed through ACF, and secure authenticated queries.
+- Next.js front end: React components, App Router, image optimisation and edge caching on Vercel or Netlify.
+- Live preview & drafts: Editors preview unpublished content before it goes live.
+- SEO in headless: Metadata, sitemaps, schema and redirects handled correctly. This is where many headless builds go wrong.
+- Headless commerce: WooCommerce or Shopify as the commerce engine behind a custom storefront.
+
+Headless isn't right for every project. If you have a small marketing site with a small team, a well-built traditional theme is cheaper to run. I'll tell you honestly which architecture fits your goals, budget and team before you commit.
+
+Q: What is headless WordPress?
+A: It is a setup where WordPress manages content and exposes it through an API (REST or GraphQL), while a separate front end such as Next.js renders the website visitors see.
+Q: Is headless WordPress good for SEO?
+A: Yes, when it is built correctly. Server-rendered or statically generated pages are fast and fully crawlable. The key is to carry over metadata, canonical URLs, sitemaps, schema and redirects from WordPress.
+Q: Can my team still use the WordPress editor?
+A: Yes. Editors use the familiar dashboard and block editor, and I set up preview so they can see changes before publishing.
+Q: Where is a headless site hosted?
+A: Typically WordPress runs on managed hosting and the front end on Vercel, Netlify or Cloudflare. I handle setup and deployment.
+
+
+## Elementor Development
+URL: https://rnamocotdev.com/services/elementor-development/
+
+I build Elementor Pro websites that look exactly like the design, load quickly and stay easy for your team to edit. I use a global design system, the Flexbox and Grid containers, and custom widgets where Elementor's defaults fall short.
+
+- Pixel-perfect Elementor builds: Figma or XD designs rebuilt faithfully in Elementor Pro with Flexbox and Grid containers.
+- Global design system: Site-wide colours, fonts and spacing, so updates happen in one place, not on 50 pages.
+- Theme Builder templates: Header, footer, single, archive and WooCommerce templates with dynamic conditions.
+- Dynamic content with ACF: Custom post types and fields connected to Elementor for listings, team pages and portfolios.
+- Custom Elementor widgets: PHP- and JS-based widgets for layouts and features the stock widgets can't handle.
+- Elementor speed optimisation: DOM reduction, asset loading, font and image tuning to improve Core Web Vitals.
+
+Elementor gets a reputation for being slow, but most of that comes from how sites are built, not from Elementor itself. Nested sections, dozens of add-on packs and inline styles pile up quickly. I keep the structure flat and the add-ons minimal, and I use the latest container features so the site performs well.
+
+Q: Can you fix or speed up my existing Elementor site?
+A: Yes. I start with an audit of structure, plugins and Core Web Vitals, then clean up the templates and optimise loading.
+Q: Elementor or a custom theme: which should I choose?
+A: Choose Elementor if your team wants to build and change pages visually and often. Choose a custom theme if performance and long-term control are the top priorities. I build both and can advise on your specific case.
+Q: Do you use Elementor add-on packs?
+A: Only when they add real value. I prefer native Elementor Pro features and small custom widgets over large add-on bundles.
+Q: Can you convert my Figma design to Elementor?
+A: Yes. Figma-to-Elementor conversion is one of my most requested services.
+
+
+## Divi Development
+URL: https://rnamocotdev.com/services/divi-development/
+
+I build and customise Divi websites with child themes, Theme Builder templates and custom modules. The result is a distinctive, responsive site that doesn't look like every other Divi template, and is still easy to edit in the visual builder.
+
+- Custom Divi builds: Designs built faithfully with Divi's builder, global presets and library layouts.
+- Divi child themes: Safe customisations in PHP, CSS and JS that survive Divi updates.
+- Theme Builder templates: Global headers, footers, post, product and archive templates with dynamic content.
+- Custom Divi modules: Bespoke modules for features the default module set doesn't cover.
+- Divi + WooCommerce: Product, cart and checkout pages styled with Divi's WooCommerce modules.
+- Divi speed & clean-up: Performance settings, unused CSS reduction and image optimisation.
+
+Divi is a good choice for teams that want full visual control. I set up global presets and a reusable layout library first, so pages stay consistent and new ones can be created in minutes without breaking the design.
+
+Q: Do you work with Divi 5?
+A: Yes. I work with current Divi releases and can help plan an upgrade or migration from older Divi versions.
+Q: Can you redesign my existing Divi site?
+A: Yes. I can refresh the design, clean up legacy layouts and improve speed while keeping your content and SEO intact.
+Q: Can you migrate my site from Divi to Elementor or a custom theme?
+A: Yes. I plan migrations page by page so URLs, metadata and rankings are preserved.
+Q: Is Divi good for SEO?
+A: Divi sites can rank well when they are built cleanly, with a proper heading structure, fast loading and an SEO plugin configured correctly.
+
+
+## ACF Development
+URL: https://rnamocotdev.com/services/acf-development/
+
+Advanced Custom Fields turns WordPress into a structured CMS. I use ACF Pro to build custom post types, field groups, flexible layouts and custom Gutenberg blocks, so your content is consistent, reusable and easy for editors to manage.
+
+- Content modelling: Post types, taxonomies and relationships designed around how your business actually works.
+- ACF Gutenberg blocks: Custom blocks with live preview, so editors build pages from on-brand components.
+- Flexible content layouts: Modular page builders powered by ACF, with no heavy builder plugin required.
+- Options & global settings: Central places for contact details, banners, social links and site-wide content.
+- ACF in headless & APIs: Fields exposed through REST or WPGraphQL for headless front ends and apps.
+- Directories & listings: Property, job, team, event and product listings with filtering and search.
+
+Good content modelling is invisible when it works. Editors fill in clear fields instead of fighting a layout, and the design stays consistent no matter who publishes. It also produces cleaner data for search engines and AI assistants.
+
+Q: Do I need ACF Pro or is the free version enough?
+A: Free ACF covers basic fields and custom post types. ACF Pro adds repeaters, flexible content, ACF blocks and options pages, which most custom builds need.
+Q: Can ACF replace a page builder?
+A: For many sites, yes. ACF blocks give editors a curated set of components that are faster and more consistent than a full page builder.
+Q: Can you work with ACF in Elementor or Divi?
+A: Yes. I connect ACF fields to Elementor and Divi dynamic content for listings and templated pages.
+Q: Can ACF data be used in a headless setup?
+A: Yes. ACF fields can be exposed through the REST API or WPGraphQL for Next.js and other front ends.
+
+
+## WooCommerce Development
+URL: https://rnamocotdev.com/services/woocommerce-development/
+
+I develop custom WooCommerce stores that are fast, conversion-focused and connected to the rest of your business: payments, shipping, inventory, CRM and email. That includes new stores, redesigns, complex product logic and performance fixes.
+
+- Custom WooCommerce themes: Product, cart and checkout experiences designed for conversion, on desktop and mobile.
+- Payments: Stripe, PayPal, Apple Pay and Google Pay, plus deposits, instalments and multi-currency.
+- Subscriptions & memberships: Recurring products, member pricing, gated content and customer portals.
+- Product configurators: Custom options, live pricing, bundles and made-to-order workflows.
+- Integrations: ERP, inventory, shipping, accounting and marketing platform syncs over REST APIs.
+- Store performance: HPOS migration, caching, query optimisation and checkout speed improvements.
+
+WooCommerce gives you full ownership of your store and data, with no platform transaction fees and no limits on customisation. The trade-off is that it needs to be built and maintained well, and that's where I come in.
+
+Q: WooCommerce or Shopify: which should I choose?
+A: WooCommerce is best when you need deep customisation, content-heavy SEO or full data ownership. Shopify is best when you want a fully managed platform with less maintenance. I develop on both and can recommend the right fit.
+Q: Can you migrate my store to WooCommerce?
+A: Yes. I migrate products, customers and orders and set up 301 redirects to protect your rankings.
+Q: Which payment gateways do you integrate?
+A: Mostly Stripe and PayPal, including Apple Pay and Google Pay, and I can integrate regional gateways on request.
+Q: Can you speed up my slow WooCommerce store?
+A: Yes. I profile slow queries and plugins, enable HPOS, configure caching correctly and optimise the checkout.
+
+
+## Shopify Development
+URL: https://rnamocotdev.com/services/shopify-development/
+
+I'm a Shopify developer who builds custom Online Store 2.0 themes from scratch in Liquid and extends stores with the Admin and Storefront APIs, webhooks and custom apps. I also build headless storefronts with Hydrogen or Next.js.
+
+- Custom Shopify themes: OS 2.0 themes in Liquid with sections, blocks and metafields your team can manage in the editor.
+- Theme customisation: Changes to Dawn and premium themes: new sections, product page logic and performance fixes.
+- Shopify APIs: Admin REST & GraphQL, Storefront API, webhooks and metaobjects for custom data and workflows.
+- Custom & private apps: Node.js apps for syncing inventory, orders and customers with ERPs, CRMs and 3PLs.
+- Headless Shopify: Hydrogen or Next.js storefronts powered by the Storefront GraphQL API.
+- Migrations: WooCommerce, Magento, Wix or Squarespace to Shopify, with redirects and SEO preserved.
+
+I've built Shopify stores for skincare, coffee, fashion and lifestyle brands. My focus is on clean Liquid, a fast storefront and a theme editor experience that lets your team launch campaigns without calling a developer.
+
+Q: Can you build a custom Shopify theme from scratch?
+A: Yes. I build Online Store 2.0 themes from scratch in Liquid, based on your Figma design or brand guidelines.
+Q: Do you work with the Shopify REST and GraphQL APIs?
+A: Yes. I build integrations with the Admin API (REST and GraphQL), the Storefront API and webhooks, including custom apps for syncing data with external systems.
+Q: What is Shopify Hydrogen?
+A: Hydrogen is Shopify's React-based framework for building headless storefronts. It's a good fit when you need a fully custom front-end experience.
+Q: Can you migrate my WooCommerce store to Shopify?
+A: Yes. I migrate products, customers and order history, rebuild the theme, and map 301 redirects to protect your search rankings.
+
+
+## Stripe & PayPal Integration
+URL: https://rnamocotdev.com/services/stripe-paypal-payment-integration/
+
+I integrate Stripe and PayPal into WordPress, WooCommerce and custom web applications. That covers one-off checkouts, subscriptions, deposits, invoices and marketplace payouts, with webhooks that keep your orders, bookings and accounts in sync.
+
+- Checkout integration: Stripe Checkout, Payment Element and PayPal Smart Buttons, embedded or hosted.
+- Subscriptions & billing: Recurring plans, trials, upgrades, proration and a customer billing portal.
+- Deposits & instalments: Partial payments for bookings, events, services and custom orders.
+- Wallets & local methods: Apple Pay, Google Pay, Link and regional payment methods.
+- Webhooks & automation: Reliable event handling for fulfilment, receipts, CRM updates and access control.
+- Security & compliance: Tokenised payments that keep card data off your server and reduce PCI scope.
+
+Payment code needs to be reliable. I build idempotent webhook handlers, test every flow in sandbox mode, including failed payments, refunds and disputes, and document the setup so your team knows exactly how money moves through the system.
+
+Q: Can you add Stripe to my WordPress site without WooCommerce?
+A: Yes. For services, donations, bookings or memberships, a direct Stripe integration is often simpler and faster than a full store.
+Q: Can customers pay with Apple Pay and Google Pay?
+A: Yes. Stripe supports both wallets, and I enable and test them during integration.
+Q: Do you handle recurring subscriptions?
+A: Yes. I build subscription flows with Stripe Billing or WooCommerce Subscriptions, including upgrades, cancellations and dunning emails.
+Q: Is it secure?
+A: Yes. Card details are collected by Stripe or PayPal and never touch your server, and webhooks are verified with signatures.
+
+
+## Online Booking Systems
+URL: https://rnamocotdev.com/services/online-booking-system-development/
+
+I build online booking and appointment systems for service businesses: clinics, salons, spas, fitness studios, restaurants, tours and rentals. Customers book and pay online, you get fewer no-shows, and your calendar stays in sync automatically.
+
+- Appointment booking: Services, staff, locations and real-time availability in a clean, mobile-first booking flow.
+- Class & event booking: Group classes, workshops and events with capacity limits and waitlists.
+- Rentals & reservations: Date-range bookings for rentals, rooms, equipment and table reservations.
+- Online payments: Full payment or deposits through Stripe or PayPal at the time of booking.
+- Reminders & follow-ups: Automated email and SMS confirmations and reminders that reduce no-shows.
+- Calendar & CRM sync: Two-way Google Calendar or Outlook sync, plus CRM and email marketing integrations.
+
+Depending on your needs I'll configure a proven booking plugin such as Amelia or Bookly, integrate a tool like Calendly, or build a custom booking engine when your rules are unusual: multi-resource scheduling, dynamic pricing or approval workflows.
+
+Q: Which booking plugin do you recommend?
+A: It depends on your business. Amelia and Bookly cover most appointment needs. When the rules are complex, a custom booking system gives you exactly the flow you need.
+Q: Can customers pay a deposit when booking?
+A: Yes. I set up full payments or deposits through Stripe or PayPal, with automatic refunds according to your cancellation policy.
+Q: Will bookings sync with my Google Calendar?
+A: Yes. Bookings can sync with Google Calendar or Outlook in both directions, so you're never double-booked.
+Q: Can you send SMS reminders?
+A: Yes. I integrate SMS providers such as Twilio for confirmations and reminders.
+
+
+## Automation & Integrations
+URL: https://rnamocotdev.com/services/wordpress-automation/
+
+I connect your website to the rest of your tools, including CRM, email marketing, accounting, spreadsheets, Slack and AI services, using Zapier, Make, n8n or custom webhooks. Leads, orders and bookings then flow through your business without manual copy-and-paste.
+
+- Lead routing: Form submissions to your CRM, with lead scoring, owner assignment and instant notifications.
+- Order & fulfilment flows: WooCommerce and Shopify orders to fulfilment, invoices, accounting and customer emails.
+- Email marketing sync: Customers and subscribers synced to Mailchimp, Klaviyo or HubSpot with the right tags.
+- AI-assisted workflows: AI steps to summarise enquiries, draft replies, classify leads or enrich data.
+- Custom webhooks: Lightweight custom endpoints when no-code tools aren't enough or get too expensive.
+- Self-hosted n8n: Private, cost-effective automation servers for high-volume workflows.
+
+I start by mapping your current process and finding where time is lost. Then I automate the highest-impact steps first. Every workflow I build includes error handling and notifications, so nothing fails silently.
+
+Q: Zapier, Make or n8n: which is best?
+A: Zapier is the easiest to use, Make is cheaper and better for complex flows, and n8n is ideal for self-hosting at high volume or when data has to stay private. I'll recommend one based on your volume and budget.
+Q: Can you connect WordPress forms to my CRM?
+A: Yes. Forms from Gravity Forms, WPForms, Elementor or Contact Form 7 can feed HubSpot, Pipedrive, Salesforce and many others.
+Q: Can you add AI to my workflows?
+A: Yes. I can add AI steps for summarising, classifying and drafting, with human review where it matters.
+Q: What happens if an automation fails?
+A: I add error handling, retries and alerts, so you're notified immediately and no data is lost.
+
+
+## Figma to WordPress
+URL: https://rnamocotdev.com/services/figma-to-wordpress/
+
+I turn Figma, Adobe XD, PSD and static HTML designs into responsive WordPress websites that match the design on every screen size and that your team can edit without breaking the layout.
+
+- Figma → WordPress: Design tokens, components and auto-layout translated into a structured theme.
+- XD & PSD → WordPress: Legacy design files converted with the same pixel-level care.
+- HTML → WordPress: Static templates and landing pages turned into a dynamic, editable CMS.
+- Your choice of editor: Gutenberg blocks, ACF, Elementor or Divi, whichever suits your team.
+- Responsive by design: Breakpoints filled in thoughtfully, even when the design only covers desktop.
+- Agency white-label: Reliable design-to-development delivery for agencies and designers.
+
+Before building I review the design file for missing states, such as hover, empty, error and mobile, and agree on how they should behave. That keeps the result faithful to the designer's intent and avoids surprises at launch.
+
+Q: How do you keep the build pixel-perfect?
+A: I extract exact spacing, typography and colour tokens from Figma, build components that mirror the design system, and compare the build against the design at every breakpoint.
+Q: What if my design doesn't include mobile layouts?
+A: I design sensible responsive behaviour based on your desktop layout and share it with you for approval.
+Q: Do you work with designers and agencies?
+A: Yes. Many of my projects come from designers and agencies who need a dependable WordPress developer.
+Q: Which editor will I use after launch?
+A: Your choice: the native block editor with custom blocks, ACF, Elementor or Divi.
+
+
+## Responsive Web Design
+URL: https://rnamocotdev.com/services/web-design/
+
+I design modern, mobile-first websites that make it obvious what you do and why visitors should choose you. Every layout is built for conversions, accessibility and search from the first wireframe onward.
+
+- UX & wireframes: Sitemaps, user flows and wireframes that structure your content around user intent.
+- UI design in Figma: Polished, on-brand interface design with a reusable component library.
+- Mobile-first layouts: Designed for phones first, then scaled up to tablets and large screens.
+- Conversion-focused pages: Clear calls to action, trust signals and frictionless forms.
+- Accessibility: Readable type, sufficient contrast and inclusive interaction patterns.
+- SEO-ready structure: Logical headings, internal linking and content layouts that search engines and AI understand.
+
+Because I also develop what I design, my designs are realistic to build and quick to load, and nothing gets lost in a hand-off between designer and developer.
+
+Q: Do you design and develop?
+A: Yes. I can handle the whole process, from wireframes and UI design to development and launch, or build from your designer's files.
+Q: Will my website work on all devices?
+A: Yes. Every site is designed mobile-first and tested on real phones, tablets and desktops across modern browsers.
+Q: Can you redesign my existing website?
+A: Yes. I keep what's working, especially SEO and URLs, and improve the design, structure and performance.
+Q: Do you write the website copy?
+A: I can help structure and refine your copy for clarity and SEO, and I work with copywriters when needed.
+
+
+## Technical SEO & Analytics
+URL: https://rnamocotdev.com/services/technical-seo-analytics/
+
+I fix the technical issues that hold rankings back and set up Google Search Console, GA4 and Google Tag Manager properly, so every form, call, booking and purchase is tracked as a conversion and you know exactly which pages and channels bring in business.
+
+- Technical SEO audits: Crawlability, indexing, canonicals, redirects, internal linking, sitemaps and robots.txt, with a prioritised fix list.
+- Google Search Console: Verification, sitemaps, coverage and indexing fixes, Core Web Vitals reports and search performance analysis.
+- GA4 setup & clean-up: A correct GA4 property with cross-domain tracking, filters, key events and audiences you can trust.
+- Events & conversions: Forms, calls, bookings, sign-ups, downloads and purchases tracked through Google Tag Manager, ready for Google Ads.
+- E-commerce tracking: WooCommerce and Shopify view_item, add_to_cart, begin_checkout and purchase events with revenue.
+- Speed, schema & reporting: Core Web Vitals fixes, structured data, Consent Mode v2 and Looker Studio dashboards.
+
+Most sites I audit have the same problems. Pages are indexed twice, important pages aren't indexed at all, and analytics either double-counts conversions or misses them. Fixing the technical foundation and measuring the right actions is usually the fastest way to grow leads and sales without spending more on ads.I document every tag, trigger and event I set up, so your marketing team or agency can rely on the data and build on it.
+
+Q: What does a technical SEO audit include?
+A: Crawling and indexing (Search Console coverage, robots.txt, sitemaps, canonicals), site structure and internal links, redirects and broken links, Core Web Vitals, structured data, and mobile usability. You get a prioritised list of fixes, and I can implement them.
+Q: Can you set up GA4 conversion tracking for my website?
+A: Yes. I set up GA4 and Google Tag Manager to track forms, calls, bookings, sign-ups and purchases as key events, and can import them into Google Ads as conversions.
+Q: Do you track WooCommerce and Shopify e-commerce events?
+A: Yes, including view_item, add_to_cart, begin_checkout and purchase with revenue and product data, so you can see which products and channels actually sell.
+Q: Why are my pages not indexed in Google Search Console?
+A: Common causes are noindex tags, canonical tags pointing elsewhere, thin or duplicate content, blocked resources and poor internal linking. An audit pinpoints the cause for each URL.
+Q: Do you support Consent Mode v2?
+A: Yes. I configure Google Consent Mode v2 with your cookie banner so tracking respects user choices and stays compliant.
+
+
+## Custom Web Development
+URL: https://rnamocotdev.com/services/custom-web-development/
+
+Beyond CMS websites, I build custom web applications from the ground up: dashboards, internal management systems, client portals and SaaS products. I take each one from idea through system design and development to deployment and continuous improvement.
+
+- SaaS products: Multi-tenant apps with authentication, roles, subscriptions and billing.
+- Dashboards & admin panels: Data-rich interfaces for operations, reporting and analytics.
+- Management systems: Inventory, booking, CRM-style and workflow tools tailored to your process.
+- APIs & integrations: REST and GraphQL APIs, third-party integrations and webhooks.
+- Deployment & DevOps: CI/CD, cloud hosting, backups, monitoring and security hardening.
+- Ongoing improvement: Iterative releases based on real usage, feedback and analytics.
+
+I also build and maintain my own web products, so I understand the full lifecycle: product decisions, UX, SEO, security, deployment and marketing, not only the code.
+
+Q: Which technologies do you use for web apps?
+A: Most often Laravel or Node.js on the back end, React or Next.js on the front end, and MySQL or PostgreSQL for data, chosen to fit the project.
+Q: Can you build an MVP for my startup?
+A: Yes. I help scope a focused MVP, build it quickly and iterate after launch based on what users actually do.
+Q: Do you provide maintenance after launch?
+A: Yes. I offer ongoing support, monitoring and feature development.
+Q: Can you take over an existing project?
+A: Yes. I start with a code and infrastructure audit, then stabilise and improve the project step by step.
+
+
+## Building MyTindahan: A Simple Store App for Sari-Sari, Grocery and Convenience Stores
+URL: https://rnamocotdev.com/blog/mytindahan-sari-sari-store-app/
+Published: 2026-11-10
+
+Short answer: MyTindahan is a store app I built for sari-sari, grocery and convenience store owners in the Philippines. It replaces the notebook: inventory with low-stock and expiry alerts, sales, utang (customer credit), GCash cash-in and cash-out, and e-load, all on a phone, tablet or laptop. Sales keep working offline. There’s a free plan, and paid plans start at ₱1,500 a year, paid through GCash.
+
+The problem: the store notebook
+Most small stores in the Philippines still run on a notebook, a calculator and memory. That works until it doesn’t:
+
+You don’t know which products are about to run out until a customer asks for them.
+Expired stock gets found too late and becomes a loss.
+The utang list is scattered across pages, and nobody is sure who still owes what.
+GCash and e-load cash gets mixed with sales money, so the till never quite matches.
+When the owner is away, there’s no way to see how the store is doing.
+
+Store owners don’t need a big point-of-sale system with hardware and training. They need the notebook, made smarter, on the phone they already have. That’s the idea behind MyTindahan’s tagline: “Alam mo ang benta, utang at stock. Kahit nasaan ka.” (Know your sales, credit and stock, wherever you are.)
+
+What MyTindahan does
+
+Inventory: stock tracked by batch, with low-stock and expiry alerts and a list of your fastest-moving products.
+Sales: check out by cash, GCash or utang, with per-item sales reports.
+Utang: a running tab for each customer, with every payment logged.
+GCash: log cash-ins and cash-outs, track your e-wallet float and your fees.
+E-load: prepaid load sales for Globe, TM, GOMO, Smart, TNT and DITO, in their own ledger.
+Services: barbershops and talyers can sell services like haircuts or repairs next to products.
+Dashboard: today’s sales, total utang, GCash float, a 7-day sales chart, and items that are low or about to expire, on one screen.
+
+Bigger stores can add bills, staff salaries, a cash vault, a barcode scanner using the phone camera, 3,000+ ready-made product photos, separate staff logins, and delivery-truck inventory.
+
+Design decisions that mattered
+A ledger, not a cash register
+MyTindahan is deliberately a back-office tool, not a POS terminal. It doesn’t issue official receipts, and owners keep using their own BIR-registered receipts. Keeping it a ledger means no hardware, no setup visit and no training. Owners can start in minutes.
+Works when the signal doesn’t
+Mobile data in many neighbourhoods is unreliable. Losing a sale because the internet dropped isn’t acceptable, so sales are saved on the device when offline and sync when the connection returns. Everything else (inventory, utang and GCash) needs a connection, which keeps the data consistent across devices and staff.
+Phone first, no app store needed
+It runs in the browser on any phone, tablet or laptop and can be installed to the home screen like an app. There’s nothing to download from an app store, and updates reach everyone instantly. It’s built with Next.js and React.
+Owners see everything, staff see what they need
+With staff accounts, cashiers get their own logins and can sell, while the owner keeps profit, costs and reports private. That matters for owners who can’t be at the store all day.
+Pricing that fits a sari-sari store
+Credit cards aren’t common for small store owners, so plans are paid yearly through GCash, and prices are shown per day so they make sense next to daily sales:
+
+PlanPriceBest for
+
+StarterFreeTrying it out, up to 10 products
+Growth₱1,500/year (about ₱5/day)Most sari-sari stores, up to 300 products, bills, payroll and cash vault
+Pro₱6,000/year (about ₱17/day)Bigger stores, unlimited products, 3 staff logins
+Business₱15,000/year (about ₱42/day)Stores with delivery trucks, 5 staff logins
+
+Every new store gets a free 7-day Growth trial, no credit card needed. Prices are correct at the time of writing. Check the MyTindahan website for current plans.
+
+Who uses it
+More than 1,500 store owners have signed up, from sari-sari stores and small groceries to convenience stores, barbershops and talyers across Luzon, the Visayas and Mindanao.
+
+What I learned building it
+
+Talk the owner’s language. Words like utang, float and e-load matter more than accounting terms.
+Fewer features, used every day, beat many features nobody opens. The dashboard answers the three questions owners ask most: how much did I sell, who owes me, and what do I need to restock?
+Offline isn’t optional for small businesses in the Philippines. Design for a weak connection from day one.
+Local payment methods matter. Many small store owners don’t have credit cards, so subscriptions are paid with GCash.
+
+Want an app like this for your business?
+MyTindahan started from a simple, everyday problem. If your business runs on spreadsheets, notebooks or group chats, a focused custom web app can save hours every week. Tell me how your business works and I’ll suggest what to build first.
+
+
+## Building TarsiFlow: Client Management for Freelancers and Agencies, From Lead to Paid Invoice
+URL: https://rnamocotdev.com/blog/tarsiflow-client-management-for-freelancers/
+Published: 2026-11-10
+
+Short answer: TarsiFlow is a client management workspace I built for freelancers, agencies and consultants. Leads, clients, projects, proposals, meetings and invoices live in one place and are connected: a won lead becomes a client and a project, and an accepted proposal becomes an invoice. It’s built with Laravel, Livewire, Tailwind CSS and MySQL, and there’s a 14-day free trial with no card required.
+
+The problem: five tools for one client
+As a freelancer, one client can easily touch five different tools: a spreadsheet for leads, a document for the proposal, a task app for the project, a calendar for meetings, and an invoicing tool for getting paid. Every hand-off between them is manual:
+
+Client details get copied from one tool to the next, with mistakes along the way.
+Meeting action items stay in notes and never become tasks.
+An accepted proposal still has to be typed up again as an invoice.
+Overdue invoices are noticed weeks late, if at all.
+There’s no single page that shows everything about a client.
+
+TarsiFlow’s promise is in its headline: win clients, deliver work and get paid in one flow.
+
+What TarsiFlow does
+
+Leads pipeline: a visual pipeline from first enquiry to signed deal.
+Clients and contacts: one page per client with contacts, projects, proposals, invoices, notes and an activity timeline.
+Proposals: templates with pricing tables and online acceptance.
+Projects and tasks: lists, boards, subtasks, comments and a “My tasks” view.
+Meetings and notes: agendas, rich notes and action items on a shared calendar.
+Invoices and payments: branded PDF invoices, payment tracking and overdue alerts.
+
+Automations: the part that saves the most time
+The modules are useful on their own, but the real value is in how they connect. TarsiFlow handles the boring hand-offs automatically:
+
+When a lead is marked as won, a client and a project are created.
+When a client accepts a proposal online, the acceptance details are recorded, and the proposal can be turned into an invoice.
+When a payment is recorded, the invoice is marked paid.
+Meeting action items become tasks.
+People are notified when tasks are assigned to them.
+A daily check flags overdue invoices.
+
+None of these are flashy, but together they remove most of the copy-and-paste work between winning a client and getting paid.
+
+Design decisions that mattered
+One flow, not a bundle of apps
+Many tools offer CRM, projects and invoicing as separate modules that barely talk to each other. In TarsiFlow, every record links to the client, so the client page is a complete history: what was proposed, what was agreed, what was delivered and what’s still unpaid.
+Laravel and Livewire
+TarsiFlow is built with Laravel, Livewire, Tailwind CSS and MySQL. Livewire gives the interface a fast, app-like feel while keeping the business logic on the server, and Laravel handles the background work, like the daily overdue-invoice check.
+Security from the start
+Client data is sensitive, so the basics are built in: HTTPS everywhere, two-factor sign-in with authenticator apps, isolated workspaces that only your team can see, team roles, full data export and workspace deletion, and a public status page. Payments go through PayPal, so card numbers never touch TarsiFlow’s servers.
+Built for more than one country
+TarsiFlow is available in English, Filipino, Spanish, French and German, and can be installed as an app from the browser.
+
+Who it’s for
+Anyone who sells their time: solo freelancers, design studios, marketing agencies and consultancies. That includes web designers and developers, copywriters, photographers and SEO specialists. If you send proposals and invoices, it’s built for you.
+
+What I learned building it
+
+Connect the steps, not just the data. The most useful features are the ones that move a client from one stage to the next without retyping anything.
+Automations beat features. Users don’t notice another screen. They notice when they no longer have to retype an invoice.
+Trust is a feature. Two-factor sign-in, data export and a status page matter to people handing over their client list.
+
+Need a custom system for your business?
+TarsiFlow is a good example of what a focused custom web app can do: take a messy, multi-tool process and turn it into one flow. If you need something similar, from client portals to payment integrations, let’s talk. You can also try TarsiFlow free for 14 days.
+
+
+## Claude Code vs OpenAI Codex: Which AI Coding Agent Is Better for Web Development?
+URL: https://rnamocotdev.com/blog/claude-vs-codex-for-web-development/
+Published: 2026-11-10
+
+Short answer: Both are capable AI coding agents, and the gap between them changes with every model release. Claude Code works best as a hands-on pair programmer in your terminal or editor, especially for multi-file changes in an existing codebase. Codex is strongest when you want to hand off well-defined tasks to run in the cloud in parallel and come back to a pull request. Many developers use both. Whichever you pick, the quality of your instructions, tests and code review matters more than the tool.
+
+What are Claude Code and Codex?
+They’re no longer just autocomplete. Both are coding agents: you describe a task in plain language, and the agent reads your files, plans changes, edits code, runs commands and tests, and reports back.
+
+Claude Code is Anthropic’s agent. It started as a terminal tool and now also runs in VS Code, JetBrains IDEs, the Claude desktop app and on the web. It runs on your machine by default, working directly in your project folder.
+OpenAI Codex is OpenAI’s agent. It’s available as an open-source CLI, IDE extensions, a desktop app and as a cloud agent inside ChatGPT, where each task runs in its own sandboxed copy of your repository.
+
+Under the hood, each uses its company’s latest models. Those models leapfrog each other every few months, so treat any benchmark you read, including the ones in other comparison posts, as a snapshot rather than a verdict.
+
+The real difference: how you work with them
+The biggest difference isn’t raw intelligence. It’s the default workflow each tool is designed around.
+Claude Code: the pair programmer
+Claude Code shines when you stay in the loop. You ask it to build a feature, it proposes a plan, asks permission before running commands or editing files (unless you allow them), and you steer as it goes. Because it runs locally, it uses your real environment: your local WordPress install, your database, your build tools, your PHP version.
+That makes it a good fit for messy, real-world work: fixing a bug that only shows up with a specific plugin combination, refactoring an old theme, or wiring a WooCommerce checkout to a custom API while you test in the browser.
+Codex: the task queue
+Codex’s cloud mode is built for delegation. You can send several tasks at once (“add unit tests for the cart class”, “fix this deprecation warning”, “update the README”), each runs in an isolated container, and you review the results as diffs or pull requests when they’re ready. The CLI also works locally in a similar way to Claude Code.
+That suits well-scoped, independent tasks and teams that already work through pull requests and CI. It’s less suited to work that depends on things that only exist on your machine, like a local database with client data, unless you set up the cloud environment to match.
+
+Side-by-side comparison
+
+Claude CodeOpenAI Codex
+
+Default styleInteractive, you steer as it worksInteractive CLI, or hand off to the cloud
+Where code runsYour machine by default (cloud option available)Cloud sandbox or your machine (CLI)
+Project instructionsCLAUDE.mdAGENTS.md
+Parallel workSubagents and multiple sessionsMany cloud tasks at once
+Extending itMCP servers, hooks, skills, pluginsMCP servers, configuration, open-source CLI
+Code reviewCan review diffs and pull requestsCan review pull requests on GitHub
+PricingIncluded in Claude paid plans, or pay per API useIncluded in ChatGPT paid plans, or pay per API use
+
+Features and plan limits change often, so check Anthropic’s and OpenAI’s own pages before you buy.
+
+How they handle WordPress and WooCommerce work
+Most of my work is WordPress, WooCommerce and custom plugins, so that’s the lens I care about. Here’s what matters for that kind of project, whichever agent you use:
+
+WordPress conventions: both know hooks, filters, the REST API and the block editor well. Both still sometimes forget nonce checks, capability checks and output escaping. Tell them your standards up front.
+Old codebases: client sites often have years of plugins, custom code and theme overrides. An agent that can search the whole project and run WP-CLI against a real install gives far better results than one guessing from a few files.
+WooCommerce: checkout, payment gateways and order hooks are high-risk. Use agents to draft and test, but read every line that touches money, and test on staging with real payment sandbox accounts.
+Plugins for sale: for plugins like WooCommerce extensions, Contact Form 7 add-ons, shortcodes and sliders, agents are great at boilerplate (settings pages, block registration, shortcode attributes, i18n) and at writing tests across PHP versions.
+
+Context and instructions matter more than the tool
+Both agents read a project instructions file automatically: CLAUDE.md for Claude Code and AGENTS.md for Codex. This is the single highest-value thing you can set up. A good one covers:
+
+The stack and versions (WordPress, PHP, WooCommerce, build tools).
+Coding standards (WordPress Coding Standards, prefixes, text domain).
+How to run tests, linters and the local site.
+What the agent must never do: touch production, commit secrets, edit vendor files.
+
+If you use both tools, keep one source of truth and point the other file at it, so your rules don’t drift.
+
+Safety: what can go wrong
+Coding agents can run commands, so treat them like a new team member with terminal access:
+
+Permissions: both let you choose how much the agent can do without asking. Keep approvals on for anything that deletes, deploys or touches a database.
+Secrets: keep API keys and client credentials out of the repository and out of prompts. Use environment variables.
+Prompt injection: an agent that reads web pages, issues or third-party code can be tricked by instructions hidden in that content. Review what it did, not just what it says it did.
+Client data: cloud sandboxes mean your code runs on someone else’s servers. Check your client contracts and the provider’s data policies before sending client repositories anywhere.
+Review everything: AI-written code can look right and still have security holes. The PHP2Shell vulnerabilities are a good reminder of how much depends on server-side code being correct.
+
+Cost: how to think about it
+Both tools are bundled into monthly subscriptions with usage limits, and both can also be billed per token through the API. For freelancers and small agencies, the subscription is usually the cheaper and more predictable option. Heavy agent use (long sessions, many parallel tasks, large codebases) is where limits start to bite, so watch your usage for a month before upgrading.
+Don’t judge cost only by the price tag. An agent that gets a task right the first time is cheaper than one that needs three rounds of fixes, even if its plan costs more.
+
+So which should you choose?
+Choose Claude Code if you want to work alongside the agent, your projects depend on a local environment (local WordPress, databases, build tools), and you do a lot of multi-file changes in existing code.
+Choose Codex if you want to hand off many small, well-defined tasks at once, your team works through GitHub pull requests and CI, and you already pay for ChatGPT.
+Use both if you can afford two subscriptions. A common pattern is to do the hands-on work in one and use the other as a second opinion for code review. Two different models catch different mistakes.
+Try both on the same real task from your own backlog, not a toy example. Give each the same instructions file, and compare the diffs. That one afternoon will tell you more than any comparison post, including this one.
+
+What this means for clients
+When a developer uses AI agents well, you get faster delivery on routine work and more time spent on planning, testing and security. You should still get clean code you own, a staging site to review, and a developer who can explain every change. If you’re planning a custom WordPress plugin or a custom web app, let’s talk.
+
+
+## PHP2Shell Explained: What the Critical PHP Vulnerabilities Mean for Your WordPress Site
+URL: https://rnamocotdev.com/blog/php2shell-php-vulnerability-wordpress/
+Published: 2026-11-09
+
+Short answer: PHP2Shell is the name for two critical flaws in PHP itself (CVE-2026-109618 and CVE-2026-109619) that can let an attacker run code on your server without logging in. They affect PHP 5.4 through 8.5, so almost every WordPress site was exposed. The fix is to run PHP 8.2.35, 8.3.36, 8.4.27 or 8.5.12 or newer, or a host-provided patched build. Check your PHP version today.
+
+What happened?
+In October 2026, the PHP project patched two memory-safety bugs in the PHP engine. Both are rated 9.2 out of 10 (CVSS 4.0) and allow remote code execution: an attacker can make a vulnerable server run their own code, without an account or password.
+Because the bugs are in PHP itself, not in WordPress or a plugin, they affect any PHP application: WordPress, WooCommerce, Drupal, Joomla, and hosting tools like cPanel and Plesk. PHP runs roughly 7 out of 10 websites whose server language is known, which is why this was one of the biggest web security events of the year.
+
+Timeline
+
+August 2026: researchers find the bugs. One was found by Ryan Austin of the security firm Calif during OpenAI’s “Patch the Planet” project, using an AI model. Wiz independently found the related issues and named them “PHP2Shell”.
+17 October: Amazon’s threat intelligence team saw an exploitation attempt, four days before the patches were public.
+20 October: details leaked early, and PHP announced the security release.
+21 October: patched PHP versions and advisories were released. Within hours, security firms reported attacks in the wild.
+Late October: governments and large organisations took unpatched sites offline as a precaution, and agencies including CISA and the NSA urged immediate updates. Security researchers reported attackers chaining PHP2Shell with a Linux privilege-escalation bug to take full control of some servers.
+
+One uncomfortable detail: PHP’s own post-mortem reportedly showed that one of the bugs was spotted in a 2024 code audit, but wasn’t fixed because nobody had shown a practical exploit. AI tools have changed that. Bugs that were “too hard to exploit” are now being found and exploited much faster.
+
+Is my WordPress site affected?
+If your site runs any PHP version older than the patched releases, assume it’s vulnerable. Affected versions:
+
+PHP branchPatched versionStatus
+
+8.58.5.12 or newerSupported
+8.48.4.27 or newerSupported
+8.38.3.36 or newerSupported
+8.28.2.35 or newerSecurity fixes only
+8.1, 8.0, 7.4No official releaseEnd of life: upgrade, or use a host backport
+5.4 to 7.3NoneEnd of life: upgrade now
+
+Many hosts quietly patched their servers. cPanel and CloudLinux released backported fixes for older branches, so an old version number doesn’t always mean you’re exposed. If you’re not sure, ask your host directly.
+
+How to check your PHP version
+
+In WordPress: go to Tools → Site Health → Info → Server and look at “PHP version”.
+In cPanel: open MultiPHP Manager or Select PHP Version to see and change the version per domain.
+On a VPS: run php -v, and also check the version your web server actually uses (PHP-FPM can differ from the command-line PHP).
+
+What to do right now
+
+Update PHP to a patched version, or confirm with your host that their build includes the fix. PHP’s maintainers said temporary workarounds were incomplete, so updating is the only real fix.
+Test on staging first if you’re jumping versions. Moving from PHP 7.4 to 8.3 can break old themes and plugins. If you can’t test quickly, put the site in maintenance mode rather than leaving it unpatched.
+Update WordPress, themes and plugins at the same time. Old plugins are often the reason sites are stuck on old PHP.
+Turn on a web application firewall. Cloudflare and other providers shipped temporary rules for PHP2Shell. A WAF helps, but it doesn’t replace patching.
+Check for signs of compromise if your site was unpatched after 21 October (see below).
+
+Signs your site may have been hacked
+
+New admin users you didn’t create.
+Unknown PHP files in wp-content/uploads, or recently changed core files.
+Spam pages, strange redirects, or Google showing “This site may be hacked”.
+Unexpected cron jobs, high CPU usage, or your host reporting outgoing spam or attacks.
+WooCommerce checkout pages with extra scripts you didn’t add (card skimmers).
+
+If you find any of these, take a full backup for evidence, then restore from a clean backup taken before the attack, update everything, and change all passwords and API keys, including database, hosting, FTP and payment gateway keys. Updating PHP closes the hole, but it doesn’t remove anything an attacker already left behind.
+
+Lessons for site owners
+
+Your hosting stack is part of your security. A fully updated WordPress install on an old PHP version is still vulnerable.
+Old PHP is a real cost. Sites stuck on PHP 7.4 for “compatibility” had no official patch. Budget for keeping themes and plugins compatible with supported PHP.
+AI is speeding up both sides. The same tools that found these bugs can help attackers find the next ones. Expect shorter gaps between disclosure and attack, and patch faster.
+Have a plan before you need it: automatic backups stored off-server, a staging site, uptime and file-change monitoring, and someone who can act the same day.
+
+Not sure if your WordPress or WooCommerce site is patched, or stuck on an old PHP version because of a theme or plugin? I can check your setup, upgrade PHP safely on staging and fix whatever breaks. Get in touch.
+Sources: PHP security advisories, Palo Alto Networks Unit 42, SecurityWeek and other public reporting as of November 2026. Details may change as investigations continue.
+
+
+## How to Add AI Features to a WordPress Website in 2026
+URL: https://rnamocotdev.com/blog/add-ai-features-to-wordpress/
+Published: 2026-11-06
+
+Short answer: The most useful AI features for a WordPress site are an assistant trained on your own content, smarter on-site search, editor tools for drafting and summarising, and background automations. Build them server-side with your API key hidden, set usage limits, and keep a human in the loop for anything customer-facing.
+
+Which AI features are actually worth it?
+Skip the gimmicks and start where AI saves time or helps visitors find answers faster:
+
+Site assistant (chat): answers questions using your pages, FAQs, docs and products, and hands off to a human when unsure.
+Semantic search: finds results by meaning, not just keywords, so “cheap flights to Cebu” matches a page titled “Budget travel to Cebu”.
+Editor tools: draft outlines, rewrite for clarity, generate alt text and meta descriptions, summarise long posts. Always reviewed before publishing.
+WooCommerce helpers: product description drafts, review summaries, “customers also asked” answers.
+Automations: classify incoming leads, summarise form submissions, route support emails, tag orders.
+
+How it works under the hood
+Most AI features follow the same pattern: WordPress sends a request to an AI model provider’s API from the server, never from the browser, and shows the response. For assistants that should “know” your site, a technique called retrieval-augmented generation (RAG) is used:
+
+Your content is split into chunks and converted into embeddings (numeric fingerprints of meaning).
+When a visitor asks something, the most relevant chunks are retrieved.
+Only those chunks are sent to the model with the question, so answers stay grounded in your content.
+
+This can run inside a custom WordPress plugin (with a small vector index in the database or a hosted vector store), or in a separate service the site calls through the REST API.
+
+Security and cost: the part most tutorials skip
+
+Never expose API keys in JavaScript. Route every call through a server endpoint with nonce and capability checks.
+Rate-limit and cap spend: per-visitor limits, a monthly budget, and caching of repeated questions.
+Guard the prompt: restrict the assistant to your topics, and don’t let page content or user input override its instructions.
+Privacy: don’t send personal data you don’t need. Tell visitors when they’re talking to AI, and check your provider’s data-retention settings.
+Fallbacks: if the API is slow or down, the site must still work. Show a contact form instead of an error.
+
+Plugin or custom build?
+Off-the-shelf AI plugins are fine for quick experiments and editor-side writing tools. For a customer-facing assistant, search, or anything tied to your products, bookings or CRM, a small custom plugin usually wins. You control the prompts, data, costs and UX, and you don’t pay for features you don’t use.
+
+A sensible rollout plan
+
+Pick one job (e.g. “answer pre-sales questions”) and define what success looks like.
+Clean up the source content. AI answers are only as good as your pages and FAQs.
+Launch to a small share of visitors, log questions and answers, and review weekly.
+Expand once accuracy and cost are where you want them.
+
+Want AI on your WordPress or WooCommerce site, done safely? Tell me what you have in mind.
+
+
+## WordPress SEO in 2026: How to Rank in Google and AI Search
+URL: https://rnamocotdev.com/blog/wordpress-seo-ai-search-2026/
+Published: 2026-11-02
+
+Short answer: In 2026, ranking a WordPress site means getting the classic technical SEO right and making your content easy for AI systems to understand and cite. That means a clean structure, real expertise, structured data, fast pages and answer-first writing.
+
+1. Technical foundations still come first
+Neither Google nor an AI assistant can rank a page it can't crawl and render. Before you think about content, make sure the basics are in place:
+
+One canonical URL per page, HTTPS everywhere and no accidental duplicates (tag archives, parameters, staging sites).
+An XML sitemap that lists only indexable pages and is submitted in Google Search Console and Bing Webmaster Tools.
+A robots.txt that doesn't block CSS, JS or the crawlers you want, including AI crawlers if you want to be cited.
+Server-rendered HTML. If important content only appears after JavaScript runs, some crawlers will miss it.
+
+2. Core Web Vitals: speed is part of the experience
+Google still uses page experience signals. The three metrics to watch are LCP (loading), INP (responsiveness) and CLS (visual stability). On WordPress the biggest wins usually come from:
+
+A lightweight theme instead of a multipurpose theme with every feature enabled.
+Fewer plugins, and none that load scripts site-wide when they're only needed on one page.
+Modern image formats (WebP/AVIF) with explicit width and height, and lazy-loading below the fold.
+Proper page caching and a CDN.
+
+3. Structured data helps machines understand you
+Schema markup (JSON-LD) tells search engines and AI systems exactly what a page is about: a person, a service, an article, an FAQ, a product. For a business or freelancer site, the most useful types are Organization or Person, Service, Article/BlogPosting, BreadcrumbList and FAQPage. Keep the markup consistent with what is visible on the page.
+
+4. Write for answers, not just keywords
+AI Overviews and assistants such as ChatGPT, Claude, Perplexity and Gemini pull passages that answer a question directly. Content that gets cited usually has:
+
+An answer-first intro. State the answer in the first two sentences, then explain.
+Clear question-style headings that match how people actually ask.
+Specific, verifiable details: steps, numbers, examples and trade-offs, not generic filler.
+Visible authorship: who wrote it, why they're qualified, and when it was last updated.
+
+5. Build topical depth with internal links
+A single page rarely ranks on its own. Create a clear hub (for example, a services page) and supporting pages and articles that link to each other with descriptive anchor text. That shows both search engines and AI models that you cover a topic in depth.
+
+6. Make your site AI-crawler friendly
+Decide deliberately which AI crawlers may access your content. If you want to be cited in AI answers, allow crawlers such as GPTBot, ClaudeBot, PerplexityBot and Google-Extended in robots.txt. Many sites also publish an llms.txt file, a short, plain-text summary of who you are and your most important pages.
+
+A quick WordPress SEO checklist
+
+Install one SEO plugin (Yoast, Rank Math or SEOPress) and configure titles, sitemaps and schema.
+Give every important page a unique title (under 60 characters) and meta description.
+Use one H1 per page and a logical H2/H3 structure.
+Add descriptive alt text to images.
+Fix broken links and redirect chains.
+Measure Core Web Vitals in Search Console and fix the worst templates first.
+Publish helpful content regularly and update older posts.
+
+If you'd like a technical SEO audit of your WordPress site, get in touch.
+
+
+## AI-Assisted Web Development: What It’s Great At and Where It Falls Short
+URL: https://rnamocotdev.com/blog/ai-assisted-web-development/
+Published: 2026-10-28
+
+Short answer: AI coding assistants are excellent at boilerplate, refactors, tests, documentation and exploring unfamiliar APIs. They’re weak at architecture, security edge cases and anything that needs real context about your business. Used with code review and testing, they shorten delivery time without lowering quality.
+
+Where AI genuinely speeds up web development
+
+Boilerplate: block registration, custom post types, REST endpoints, Liquid section schemas, form validation.
+Refactoring: converting old jQuery to vanilla JS, PHP version upgrades, renaming and restructuring at scale.
+Tests and docs: generating test cases, README files, inline docs and changelogs.
+Exploration: “How does this Shopify Admin GraphQL mutation work?” gets you to a working draft fast. Then you verify it against the official docs.
+Content-heavy builds: turning structured content into templates, seeding realistic demo data, drafting alt text.
+
+Where it still falls short
+
+Architecture: choosing between a block theme, headless or a page builder depends on your team, budget and roadmap, which a model doesn’t know.
+Security: generated code often misses nonce checks, capability checks, escaping or rate limits unless you ask for them explicitly, and reviewers still need to verify them.
+Outdated or invented APIs: models sometimes suggest deprecated functions or methods that don’t exist. Everything must be tested.
+Performance: AI-written code can be correct but slow: N+1 queries, unnecessary scripts, heavy DOM.
+Taste: pixel-perfect design and good UX copy still need a human eye.
+
+How to keep quality high
+
+Give context: coding standards, the stack, constraints and examples from the existing codebase.
+Small, reviewable changes instead of huge generated files.
+Review every line like a pull request from a new teammate, with security and performance checks.
+Automated checks: linters, PHPCS/WordPress Coding Standards, type checks, tests, Lighthouse and accessibility audits.
+Never paste secrets or client data you don’t have permission to share into an AI tool.
+
+What this means for clients
+Used well, AI shifts time away from typing and toward the things that matter: planning, UX, testing, accessibility and SEO. You should still expect clean, documented code you own, a staging site to review, and a developer who can explain every decision.
+Planning a custom web app or a custom WordPress theme? Let’s talk.
+
+
+## Headless WordPress with Next.js: When It's Worth It (and When It Isn't)
+URL: https://rnamocotdev.com/blog/headless-wordpress-nextjs-guide/
+Published: 2026-10-18
+
+Short answer: Headless WordPress with Next.js is worth it when you need top-tier performance, a highly custom front end, or one content source feeding several channels. For a small brochure site, a well-built traditional theme is usually faster to ship and cheaper to run.
+
+What "headless" actually means
+In a traditional WordPress site, WordPress stores content and renders the HTML through a PHP theme. In a headless setup, WordPress only stores and serves content through an API (REST or WPGraphQL), and a separate application, usually built with Next.js, renders the website.
+
+The benefits
+
+Speed. Static generation and incremental static regeneration (ISR) serve pre-built pages from a CDN edge.
+Security. The public site doesn't expose wp-admin or PHP, which shrinks the attack surface.
+Design freedom. React components, animations and app-like interactions without fighting a theme.
+Omnichannel. The same content can feed a website, a mobile app and other platforms.
+
+The trade-offs
+
+Two systems to host and maintain: WordPress and the front end.
+Plugins that render front-end output (forms, sliders, page builders) don't work out of the box.
+Preview and SEO need deliberate setup. They don't come for free.
+Higher initial cost than a standard theme build.
+
+Is headless WordPress good for SEO?
+Yes, when it's done properly. Pages rendered on the server or at build time are fully crawlable and usually very fast. The common mistakes are forgetting to pass SEO plugin metadata to the front end, missing canonical tags, broken sitemaps and lost redirects. A good build pulls titles, descriptions, schema and redirects from WordPress (for example through WPGraphQL plus an SEO plugin extension) and renders them in Next.js metadata.
+
+A typical stack
+
+WordPress on managed hosting, with ACF for structured fields
+WPGraphQL (+ WPGraphQL for ACF) as the API
+Next.js App Router, deployed to Vercel, Netlify or Cloudflare
+On-demand revalidation triggered when editors publish
+
+How to decide
+Choose headless if performance is a competitive advantage, your front end is highly interactive, or you're publishing to more than one channel. Stay traditional if your team relies heavily on page builders, your budget is tight, or the site is mostly static pages.
+Not sure which way to go? See my headless WordPress service or ask me directly.
+
+
+## AI Automation for Small Businesses: Practical Workflows with n8n, Make and Zapier
+URL: https://rnamocotdev.com/blog/ai-automation-for-small-business/
+Published: 2026-10-10
+
+Short answer: The best AI automations for small businesses take a repetitive, text-heavy task (reading enquiries, sorting emails, writing follow-ups) and let an AI step classify, summarise or draft, while a workflow tool like n8n, Make or Zapier moves the data between your website, CRM and inbox. Keep a human approving anything that goes to customers.
+
+Five workflows that pay for themselves
+
+Lead triage: a website form submission is summarised, scored (budget, urgency, fit), tagged and sent to your CRM, with a short summary posted to Slack or email.
+Inbox digest: support emails are grouped by topic each morning, with suggested replies saved as drafts for review.
+Order follow-ups: WooCommerce or Shopify orders trigger personalised thank-you notes, review requests or reorder reminders, drafted by AI from the order details.
+Booking prep: before an appointment, the customer’s form answers and history are summarised into a one-paragraph brief.
+Content repurposing: a new blog post becomes draft social posts, an email newsletter section and FAQ entries, queued for approval.
+
+Which tool should you use?
+
+ToolBest forWatch out for
+
+ZapierFast setup, huge app libraryCost grows quickly with volume
+MakeVisual, complex multi-step flowsOperations-based pricing to monitor
+n8nSelf-hosting, privacy, high volumeNeeds hosting and maintenance
+
+Make it reliable, not just clever
+
+Structured outputs: ask the AI step to return JSON (e.g. {"score": 1-5, "category": "..."}) so the next step doesn’t break.
+Error handling and retries: every workflow should alert you on failure instead of failing silently.
+Human approval for anything customer-facing, at least until you trust the output.
+Data minimisation: send only the fields the AI needs, and avoid sensitive personal data.
+Cost controls: use smaller, cheaper models for classification and save larger models for writing.
+
+Where to start
+List the tasks your team repeats every week, estimate the hours, and automate the biggest one first. A single well-built workflow often saves several hours a week and shows quickly whether AI is worth expanding.
+I build automations that connect WordPress, WooCommerce, Shopify, booking systems and CRMs. See automation services or tell me about your workflow.
+
+
+## Elementor vs a Custom WordPress Theme: Which Should You Choose?
+URL: https://rnamocotdev.com/blog/elementor-vs-custom-wordpress-theme/
+Published: 2026-09-30
+
+Short answer: Choose Elementor if your marketing team needs to build and change pages visually and often. Choose a custom theme (block theme + ACF) if performance, consistency and long-term maintainability matter most. Both can be excellent when they're built well.
+
+Editing experience
+Elementor offers true drag-and-drop editing. Non-technical teams can create landing pages without a developer. A custom theme gives editors a curated set of blocks or fields. There's less freedom, but it's also much harder to break the design.
+
+Performance
+A custom theme ships only the code your site needs, so it usually has the edge in Core Web Vitals. Modern Elementor (with Flexbox/Grid containers and optimised asset loading) can still perform well if the build is disciplined. Avoid nested containers, keep add-on packs to a minimum and optimise images.
+
+Cost and speed to launch
+Elementor builds are generally faster to deliver for marketing sites. Custom themes take more upfront development but cost less over time in licence fees, plugin conflicts and clean-up work.
+
+Long-term maintenance
+Page builder sites depend on the builder and any add-ons staying compatible. Custom themes depend only on WordPress core and the code you own. For sites expected to live five years or more, that difference matters.
+
+A quick comparison
+
+CriteriaElementorCustom theme
+
+Visual page buildingExcellentCurated blocks
+Performance ceilingGoodExcellent
+Design consistencyDepends on editorsEnforced
+Upfront costLowerHigher
+Long-term controlBuilder-dependentFull ownership
+
+The hybrid option
+Many projects benefit from a custom theme for the core templates (posts, products, listings) plus a builder or block patterns for campaign landing pages. You get speed where it matters and flexibility where marketing needs it.
+I build both. Read about my Elementor development and custom theme development services.
+
+
+## Shopify vs WooCommerce in 2026: A Developer's Honest Comparison
+URL: https://rnamocotdev.com/blog/shopify-vs-woocommerce-2026/
+Published: 2026-09-12
+
+Short answer: Shopify is the better choice when you want a fully managed, low-maintenance store and fast time to market. WooCommerce is better when you need deep customisation, full data ownership or a content-heavy site where the store is one part of a bigger WordPress platform.
+
+Hosting and maintenance
+Shopify is fully hosted. Security, uptime and checkout scaling are handled for you. WooCommerce runs on your own WordPress hosting, so you (or your developer) are responsible for updates, backups and performance.
+
+Customisation
+WooCommerce can be customised at almost every level because it's open-source PHP. Shopify themes are written in Liquid, and deeper logic is handled with apps, metafields, metaobjects and the Admin and Storefront APIs. Shopify is very capable, but some checkout and core behaviours are intentionally locked down.
+
+Costs
+Shopify has a monthly plan fee plus app subscriptions, and transaction fees if you don't use Shopify Payments. WooCommerce itself is free, but you pay for hosting, premium extensions and maintenance. Compare the total cost over 2–3 years, not just the first month.
+
+SEO
+Both platforms can rank well. WooCommerce benefits from WordPress's strong content and SEO tooling. Shopify has a few fixed URL structures (such as /products/ and /collections/), but it handles technical basics well, and blogs and structured data can be extended with themes and apps.
+
+Payments
+Shopify Payments is seamless where available. WooCommerce integrates with Stripe, PayPal and many regional gateways, which is useful for businesses in markets Shopify Payments doesn't support.
+
+Which should you choose?
+
+Pick Shopify if you're product-focused, want minimal maintenance and plan to grow quickly.
+Pick WooCommerce if you need custom business logic, want to own everything, or already run a large WordPress site.
+Consider headless (Hydrogen or Next.js) if brand experience and performance are your main differentiators.
+
+I develop on both platforms. See Shopify development and WooCommerce development.
+
+
+## Figma to WordPress: My Step-by-Step Workflow for Pixel-Perfect Builds
+URL: https://rnamocotdev.com/blog/figma-to-wordpress-workflow/
+Published: 2026-08-25
+
+Short answer: A reliable Figma-to-WordPress conversion has six stages: design review, design tokens, a component library, content modelling, responsive build, and QA against the design. Skipping the first two is the most common reason builds drift from the design.
+
+1. Design review
+Before writing code I go through the Figma file and list anything missing: hover and focus states, empty and error states, mobile layouts, long-content cases. Agreeing on these upfront prevents surprises later.
+
+2. Design tokens
+Colours, type scale, spacing and radii are extracted into tokens, either in theme.json for block themes or in Tailwind/CSS variables. One source of truth keeps the build consistent and makes future changes easy.
+
+3. Component library
+Each repeating design element becomes a reusable component: a Gutenberg block, ACF block, Elementor template or Divi layout, depending on the editor the client prefers.
+
+4. Content modelling
+I decide what should be a page, a custom post type, a taxonomy or a global option. This is what makes the finished site easy to edit and scale.
+
+5. Responsive build
+I build mobile-first and fill in breakpoints the design didn't cover, staying faithful to the designer's intent. Images get proper sizes and modern formats, and fonts are loaded efficiently.
+
+6. QA against the design
+I compare the build to the Figma frames at each breakpoint, test in major browsers, run accessibility and Lighthouse checks, and fix the details before handover.
+
+What you get at the end
+
+A WordPress site that matches the design
+An editing experience your team understands
+Clean, documented code in a Git repository
+A short video walkthrough for content editors
+
+Have a Figma file ready? Learn more about Figma to WordPress or send it over for a quote.
+
+
+## Projects
+- tarsiflow (SaaS · My product): Leads, clients, projects, proposals and invoices in one workspace. A won lead becomes a client and a project, and an accepted proposal becomes an invoice. https://tarsiflow.com/
+- MyTindahan (SaaS · My product): Inventory with low-stock and expiry alerts, sales, utang (credit) tracking and a GCash/e-load ledger, built for store owners in the Philippines and usable offline. https://mytindahan.store/
+- NAFDA Foodservice (Elementor · WooCommerce): Member and supplier website for an Australian & New Zealand foodservice distribution network, with a WooCommerce shop. https://nafda.com.au
+- Kavalri (Shopify · Jewellery): Shopify store for an Australian fine-jewellery brand specialising in engagement and wedding rings. https://kavalri.com.au
+- O'Sullivan Legal (Divi · Law firm): Website for a Sydney family-law firm covering divorce, child custody and property settlements. https://www.osullivanlegal.com.au
+- Motiv (Shopify · Supplements): Shopify storefront for a nootropic and focus-supplement brand. https://trymotiv.com
+- AAA Build (Elementor · Renovations): Website for an award-winning luxury bathroom-renovation company in Melbourne. https://aaabuild.com.au
+- CSID (WooCommerce · B2B store): WooCommerce store for an Australian supplier of ID card printers, consumables and software. https://www.csid.com.au
+- EAS (Elementor · Trades): Website for a South Australian electrical, air conditioning and solar contractor. https://eas.trade
+- Atlas Search (Elementor · Recruitment): Website and job listings for a US recruitment and talent-search firm. https://atlassearchllc.com
+- Mentally Well Workplaces (Elementor · Online courses): Website for an Australian provider of online workplace mental-health training. https://www.mentallywellworkplaces.com.au
+- Overall Perth Gutter Cleaning (Elementor · Local services): Lead-generation website for a residential and commercial gutter-cleaning company in Perth. https://overallperthguttercleaning.com.au
+- Next Level Removals (WordPress · Removalists): Quote-driven website for a Sydney removalist company. https://www.nextlevelremovals.com.au
+- Kuga Energy (WordPress · Solar): Website for an Australian solar, battery and EV-charging company. https://www.13kuga.com.au
+- Laing's Plumbing Co. (WordPress · React): Website for a Brisbane Northside plumbing company, with enquiry and call-out forms. https://laingplumbing.com.au
+- Defender Pest Control (WordPress · Pest control): Website for a Melbourne pest-control company with booking calls to action. https://www.defenderpestcontrol.com.au
+- ELOVL (Shopify · Health): Shopify store for a science-backed vision and eye-health supplement brand. https://elovl.com
+- Applied Health (Shopify · Nutrition): Shopify store for a nutrition and wellness brand selling since 1997. https://appliedhealth.com
+- Nood Nutrition (Shopify · Supplements): Shopify store for an Australian plant-based supplement brand. https://noodnutrition.com.au
+- Wholesale Savings (Shopify · Wholesale): Shopify store selling wholesale essentials across cosmetics, health, household and apparel. https://wholesalesavings.com
+- Galaxy Homeware (Shopify · Homewares): Shopify store for a New Zealand bathroom and homewares retailer. https://ghomeware.co.nz
+- Golf Ball Busters (Shopify · Sporting goods): Shopify store for premium used golf balls from leading brands. https://www.golfballbusters.com
+- Wardrobes Direct (Shopify · Made-to-measure): Shopify store for made-to-measure DIY wardrobe sliding doors delivered across Australia. https://www.wardrobesdirect.com.au
+- Cloud Blvd (Shopify · Fashion): Shopify store for an Australian lingerie and fashion boutique. https://cloudblvd.com.au
+- Oz Timber Floor (Shopify · Flooring): Website for a Sydney timber-flooring supplier and installer. https://oztimberfloor.com.au
+- BookTaps (Shopify · Web app): Product site for an app that turns picture books into tap-to-read stories. https://booktaps.com
+- Choctaw Dental (Custom code · Dental): Hand-coded website for a dental practice in Choctaw, Oklahoma, with online appointment requests. https://choctawdental.com
+- El Reno Dental (Custom code · Dental): Hand-coded website for a dental practice in El Reno, Oklahoma. https://elrenodental.com
+- Australian Pacific College (Custom code · Education): Website for an Australian English-language and vocational college, with a course finder. https://apc.edu.au
+- Exceed Coaching (One-page site · Coaching): One-page website for a UK life coach for women. https://exceed-coaching.co.uk
+- Joshua Gayman (One-page site · Personal brand): One-page personal-brand site for a founder and AI systems architect. http://joshuagayman.com
+- N-Essentials (BigCommerce · Natural health): BigCommerce store for an Australian natural health and essential-oils retailer. https://n-essentials.com.au
+- AMAX Synthetic Grass (Wix · Landscaping): Website for a synthetic-grass supplier and installer in Sydney. https://www.amaxsyntheticgrass.com.au
+- Razor Kayaks (Squarespace · Outdoor): Squarespace store for a high-performance inflatable-kayak brand in Australia. https://razorkayaks.com.au
+- Water & Outdoors (Squarespace · Reviews): Squarespace site with outdoor and water-sports equipment reviews and guides. https://www.waterandoutdoors.com.au
+- Macleay Optics (Squarespace · Optometry): Website for an eyewear and optometry practice in Potts Point, Sydney. https://macleayoptics.com.au

@@ -1,0 +1,44 @@
+# Renie Namocot
+
+> Renie Namocot is a freelance full-stack web developer based in the Philippines, specialising in WordPress (custom themes, plugins, headless WordPress with Next.js, Elementor, Divi, ACF, WooCommerce) and Shopify (custom Online Store 2.0 themes, Shopify Admin/Storefront REST & GraphQL APIs, Hydrogen). Renie has built more than 1,000 websites (most under NDA for agencies and brands), and also builds Stripe/PayPal payment integrations, online booking systems, business automations (Zapier, Make, n8n), Figma-to-WordPress conversions and custom web apps (Laravel, React, Node.js). Renie also built and runs two SaaS products: tarsiflow (https://tarsiflow.com/, client management for freelancers and agencies) and MyTindahan (https://mytindahan.store/, a store app for sari-sari and grocery stores in the Philippines with 1,500+ sign-ups). Clients across Australia, United States, United Kingdom, Germany, New Zealand, Singapore. Contact: rnamocotdev@gmail.com
+
+## Key pages
+- [Home](https://rnamocotdev.com/)
+- [About](https://rnamocotdev.com/about/)
+- [Services](https://rnamocotdev.com/services/)
+- [Projects](https://rnamocotdev.com/projects/)
+- [Plugins](https://rnamocotdev.com/plugins/)
+- [Blog](https://rnamocotdev.com/blog/)
+- [Contact](https://rnamocotdev.com/contact/)
+
+## Services
+- [WordPress Development](https://rnamocotdev.com/services/wordpress-development/): Freelance WordPress developer building fast, secure, custom WordPress websites: themes, plugins, WooCommerce, headless and page builders. Remote, worldwide.
+- [Custom WordPress Themes](https://rnamocotdev.com/services/custom-wordpress-theme-development/): Custom WordPress theme development: hand-coded block themes, Gutenberg blocks and ACF layouts built for speed, accessibility and easy editing.
+- [WordPress Plugin Development](https://rnamocotdev.com/services/wordpress-plugin-development/): Custom WordPress plugin development: bespoke features, API integrations, WooCommerce extensions and admin tools, built to WordPress coding standards.
+- [Headless WordPress](https://rnamocotdev.com/services/headless-wordpress-development/): Headless WordPress development with Next.js, React and WPGraphQL. Blazing-fast, secure front ends with WordPress as the editor-friendly CMS.
+- [Elementor Development](https://rnamocotdev.com/services/elementor-development/): Elementor Pro developer building fast, pixel-perfect, editable WordPress sites with global design systems, custom widgets, dynamic content and ACF.
+- [Divi Development](https://rnamocotdev.com/services/divi-development/): Divi developer for custom Divi websites, child themes, Theme Builder templates and custom Divi modules. Fast, responsive and easy for your team to update.
+- [ACF Development](https://rnamocotdev.com/services/acf-development/): ACF Pro development: custom post types, flexible content, ACF Gutenberg blocks and options pages that make WordPress structured and easy to manage.
+- [WooCommerce Development](https://rnamocotdev.com/services/woocommerce-development/): WooCommerce developer building custom online stores with Stripe and PayPal payments, subscriptions, product configurators and ERP/inventory integrations.
+- [Shopify Development](https://rnamocotdev.com/services/shopify-development/): Shopify developer building custom Online Store 2.0 themes in Liquid, Shopify apps, Storefront and Admin API integrations, Hydrogen headless stores and migrations.
+- [Stripe & PayPal Integration](https://rnamocotdev.com/services/stripe-paypal-payment-integration/): Stripe and PayPal payment integration for WordPress, WooCommerce and custom web apps: checkout, subscriptions, deposits, invoices and secure webhooks.
+- [Online Booking Systems](https://rnamocotdev.com/services/online-booking-system-development/): Online booking systems for WordPress: live availability, Stripe/PayPal deposits, reminders and Google Calendar sync for clinics, studios and services.
+- [Automation & Integrations](https://rnamocotdev.com/services/wordpress-automation/): Automate WordPress, WooCommerce and Shopify with Zapier, Make, n8n and webhooks. Connect forms, CRM, email and orders and save hours every week.
+- [Figma to WordPress](https://rnamocotdev.com/services/figma-to-wordpress/): Pixel-perfect Figma, Adobe XD, PSD and HTML to WordPress conversion: responsive, fast, accessible and easy to edit with Gutenberg, ACF, Elementor or Divi.
+- [Responsive Web Design](https://rnamocotdev.com/services/web-design/): Modern, responsive web design for business websites and online stores: mobile-first UI, conversion-focused layouts, accessibility and SEO-ready structure.
+- [Technical SEO & Analytics](https://rnamocotdev.com/services/technical-seo-analytics/): Technical SEO audits, Google Search Console, GA4 and Google Tag Manager setup, event and conversion tracking for WordPress, WooCommerce and Shopify sites.
+- [Custom Web Development](https://rnamocotdev.com/services/custom-web-development/): Full-stack custom web development: dashboards, management systems, SaaS applications and REST/GraphQL APIs using Laravel, PHP, React, Next.js and Node.js.
+
+## Articles
+- [Building MyTindahan: A Simple Store App for Sari-Sari, Grocery and Convenience Stores](https://rnamocotdev.com/blog/mytindahan-sari-sari-store-app/): Why I built MyTindahan, a phone-friendly back-office app for Philippine store owners that tracks inventory, sales, utang, GCash and e-load, and keeps selling when the internet drops.
+- [Building TarsiFlow: Client Management for Freelancers and Agencies, From Lead to Paid Invoice](https://rnamocotdev.com/blog/tarsiflow-client-management-for-freelancers/): Why I built TarsiFlow, a client management workspace that connects leads, clients, projects, proposals and invoices, so freelancers and agencies stop juggling five tools.
+- [Claude Code vs OpenAI Codex: Which AI Coding Agent Is Better for Web Development?](https://rnamocotdev.com/blog/claude-vs-codex-for-web-development/): A practical comparison of Claude Code and OpenAI Codex for WordPress, WooCommerce, Shopify and custom web development: workflow, context, safety, cost and when to use each.
+- [PHP2Shell Explained: What the Critical PHP Vulnerabilities Mean for Your WordPress Site](https://rnamocotdev.com/blog/php2shell-php-vulnerability-wordpress/): PHP2Shell (CVE-2026-109618 and CVE-2026-109619) lets attackers run code on unpatched PHP servers. What happened, how to check your PHP version, and how to protect WordPress and WooCommerce sites.
+- [How to Add AI Features to a WordPress Website in 2026](https://rnamocotdev.com/blog/add-ai-features-to-wordpress/): How to add AI to WordPress: chat assistants, smart search, editor tools and automations, built securely with API keys, budgets and privacy in mind.
+- [AI-Assisted Web Development: What It’s Great At and Where It Falls Short](https://rnamocotdev.com/blog/ai-assisted-web-development/): An honest look at AI coding assistants for WordPress, Shopify and custom web development: where they speed things up, where they fail, and how to keep quality high.
+- [AI Automation for Small Businesses: Practical Workflows with n8n, Make and Zapier](https://rnamocotdev.com/blog/ai-automation-for-small-business/): Practical AI automations for small businesses: lead triage, inbox summaries, order follow-ups and content repurposing with n8n, Make or Zapier.
+- [WordPress SEO in 2026: How to Rank in Google and AI Search](https://rnamocotdev.com/blog/wordpress-seo-ai-search-2026/): A practical WordPress SEO checklist for 2026: technical foundations, structured data, content that AI assistants cite, and the Core Web Vitals that still matter.
+- [Headless WordPress with Next.js: When It's Worth It (and When It Isn't)](https://rnamocotdev.com/blog/headless-wordpress-nextjs-guide/): An honest guide to headless WordPress with Next.js: benefits, trade-offs, SEO considerations, costs and how to decide if your project needs it.
+- [Elementor vs a Custom WordPress Theme: Which Should You Choose?](https://rnamocotdev.com/blog/elementor-vs-custom-wordpress-theme/): Elementor or a custom-coded WordPress theme? Compare speed, flexibility, cost, editing experience and long-term maintenance to choose the right approach.
+- [Shopify vs WooCommerce in 2026: A Developer's Honest Comparison](https://rnamocotdev.com/blog/shopify-vs-woocommerce-2026/): Shopify or WooCommerce? A developer who builds on both compares costs, customisation, SEO, payments, scalability and maintenance in 2026.
+- [Figma to WordPress: My Step-by-Step Workflow for Pixel-Perfect Builds](https://rnamocotdev.com/blog/figma-to-wordpress-workflow/): How I convert Figma designs into fast, responsive, editable WordPress websites: design review, tokens, components, content modelling, QA and launch.

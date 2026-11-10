@@ -1,0 +1,18 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# Deploy bundle (rebuild from public/)
+*.zip
+
+# Runtime data written by the contact form / visit counter on the server
+public/api/data/*
+!public/api/data/.htaccess
+src/api/data/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+
+# Private client list (not used by the build)
+src/websitelist.txt
