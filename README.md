@@ -27,7 +27,9 @@ Deploy the **`public/`** folder to any static host, such as Netlify, Vercel, Clo
 | Blog posts (`/blog/<slug>/`) | `src/content/blog.py` |
 | Plugin store (`/plugins/<slug>/`) | `src/content/plugins.py`. Set `status: "available"`, `price` and `buy_url` to start selling |
 | Portfolio projects | `src/data/projects.json`, with screenshots in `assets/img/work/` |
-| Styles / scripts | `assets/css/style.css`, `assets/js/main.js` |
+| Privacy policy & terms (`/privacy/`, `/terms/`) | `src/content/legal.py`. Update `LEGAL_UPDATED` in `build.py` when you change them |
+| Google Analytics + cookie banner | Set `GA4_ID` in `build.py`. Leave it `""` for no analytics and no banner |
+| Styles / scripts | `assets/css/style.css`, `assets/css/fonts.css` (self-hosted fonts), `assets/js/main.js` |
 
 After any change, run `python build.py` again.
 

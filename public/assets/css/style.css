@@ -1149,3 +1149,20 @@ body { counter-reset: sec; }
 @media (min-width: 1201px) { .stack-groups { grid-template-columns: repeat(5, 1fr); } }
 @media (max-width: 900px) { .seo-card-grid { grid-template-columns: 1fr; gap: 18px; } }
 .contact-form .hp, .chat-form .hp { position: absolute; left: 0; top: 0; width: 1px; height: 1px; padding: 0; border: 0; opacity: 0; overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); pointer-events: none; }
+
+/* ---------- Legal pages, footer legal links, cookie consent ---------- */
+.legal-prose { max-width: 760px; }
+.legal-prose h3 { font-size: 20px; letter-spacing: -.02em; color: var(--ink); margin: 1.6em 0 .4em; font-weight: 600; }
+.legal-links { display: inline-flex; gap: 16px; flex-wrap: wrap; }
+.legal-links a, .legal-links button { color: inherit; font: inherit; background: none; border: 0; padding: 0; cursor: pointer; }
+.legal-links a:hover, .legal-links button:hover { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
+.consent { position: fixed; z-index: 90; left: 20px; bottom: 20px; max-width: 420px; padding: 20px 22px; background: var(--surface); border: 1px solid var(--line); border-radius: 20px; box-shadow: var(--shadow-lg); font-size: 14px; line-height: 1.55; color: var(--ink-2); }
+.consent[hidden] { display: none; }
+.consent p { margin: 0 0 14px; }
+.consent strong { color: var(--ink); }
+.consent a { color: var(--accent-text); text-decoration: underline; text-underline-offset: 3px; }
+.consent-actions { display: flex; gap: 10px; }
+.consent-actions .btn { flex: 1; justify-content: center; padding-top: 11px; padding-bottom: 11px; }
+@media (max-width: 640px) {
+  .consent { left: 16px; right: 16px; bottom: 16px; max-width: none; }
+}

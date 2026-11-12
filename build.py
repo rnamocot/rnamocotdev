@@ -29,6 +29,7 @@ sys.path.insert(0, str(SRC / "content"))
 from services import SERVICES  # noqa: E402
 from blog import POSTS  # noqa: E402
 from plugins import PLUGINS as ALL_PLUGINS  # noqa: E402
+from legal import PRIVACY, TERMS  # noqa: E402
 
 # Only plugins marked "published": True appear on the site. With none published,
 # the whole plugin store (pages, nav, sitemap, homepage section) is hidden.
@@ -61,6 +62,11 @@ GOOGLE_SITE_VERIFICATION = "-qCzvDETRABgZTAZikY0MfzuzwIbW0UPn7OZMZOH4lA"   # Goo
 BING_SITE_VERIFICATION = ""     # Bing Webmaster Tools -> Add site -> HTML Meta Tag
 # IndexNow key (Bing, Yandex, Seznam, Naver...). Any 8-128 hex chars; a file with this name is published at the site root.
 INDEXNOW_KEY = "7f3c9a1e5b2d4f8a9c0e6b1d3a5f7c9e"
+# Google Analytics 4 Measurement ID, e.g. "G-ABC123XYZ". Leave "" for no analytics.
+# When set, a cookie consent banner appears and GA only loads after the visitor clicks "Accept"
+# (Google Consent Mode v2), and the privacy policy is updated automatically.
+GA4_ID = ""
+LEGAL_UPDATED = "2026-11-10"   # "Last updated" date on /privacy/ and /terms/. Change it when you edit src/content/legal.py
 BUILD_DATE = date.today().isoformat()
 
 DATA = json.loads((SRC / "data" / "projects.json").read_text(encoding="utf-8"))
@@ -543,6 +549,7 @@ def footer():
     </div>
     <div class="footer-bottom">
       <span>© {date.today().year} {NAME}. All rights reserved.</span>
+      <span class="legal-links"><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a>{'<button type="button" data-consent-open>Cookie settings</button>' if GA4_ID else ''}</span>
       <span class="visits" hidden><b data-visits>0</b> visitors</span>
       <span class="credit">Designed & developed by <a href="{CREDIT_URL}" target="_blank" rel="noopener" title="Renie Namocot: Full-Stack Web Developer">{LOGO_SVG.replace('class="logo-mark"', 'class="logo-mark credit-mark"')}<span>RN</span></a></span>
     </div>
@@ -657,14 +664,14 @@ def render(path, title, desc, body, schema=None, active=None, og_type="website",
 <link rel="manifest" href="/site.webmanifest">
 {verification}
 <link rel="alternate" type="application/rss+xml" title="{NAME}: Blog" href="/blog/rss.xml">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" href="/assets/fonts/inter-tight-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 {preload}
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/fonts.css?v={asset_version('css/fonts.css')}">
 <link rel="stylesheet" href="/assets/css/style.css?v={asset_version('css/style.css')}">
 <script type="application/ld+json">
 {ld}
 </script>
+{ANALYTICS_HEAD}
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -676,6 +683,7 @@ def render(path, title, desc, body, schema=None, active=None, og_type="website",
 {footer()}
 {MODAL if with_modal else ""}
 {CHAT_WIDGET}
+{CONSENT_BANNER}
 {projects_json}
 <script src="/assets/js/main.js?v={asset_version('js/main.js')}" defer></script>
 </body>
@@ -1246,6 +1254,97 @@ def build_post(p):
            lastmod=p.get("updated", p["date"]))
 
 
+# ------------------------------------------------------------------ CONSENT + ANALYTICS
+# Analytics only loads after the visitor accepts (the choice is remembered in localStorage as "rn-consent").
+ANALYTICS_HEAD = "" if not GA4_ID else """<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+(function () {
+  var c = null;
+  try { c = localStorage.getItem("rn-consent"); } catch (e) {}
+  gtag("consent", "default", {analytics_storage: c === "granted" ? "granted" : "denied",
+    ad_storage: "denied", ad_user_data: "denied", ad_personalization: "denied"});
+  window.rnLoadAnalytics = function () {
+    if (window.rnAnalyticsLoaded) return;
+    window.rnAnalyticsLoaded = true;
+    var s = document.createElement("script");
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=__GA__";
+    document.head.appendChild(s);
+    gtag("js", new Date());
+    gtag("config", "__GA__");
+  };
+  if (c === "granted") window.rnLoadAnalytics();
+})();
+</script>""".replace("__GA__", GA4_ID)
+
+CONSENT_BANNER = "" if not GA4_ID else """<div class="consent" data-consent hidden role="region" aria-label="Cookie consent">
+  <p><strong>Cookies?</strong> I’d like to use Google Analytics cookies to see which pages are useful. They’re only set if you accept. <a href="/privacy/#cookies-and-similar-technologies">Privacy policy</a></p>
+  <div class="consent-actions">
+    <button type="button" class="btn btn-ghost" data-consent-choice="denied">Reject</button>
+    <button type="button" class="btn btn-dark" data-consent-choice="granted">Accept</button>
+  </div>
+</div>"""
+
+
+def legal_text(html):
+    if GA4_ID:
+        analytics = ("<h2>Analytics (only with your consent)</h2>\n"
+                     "<p>If you click <strong>Accept</strong> on the cookie banner, this site uses <strong>Google Analytics 4</strong> "
+                     "to understand which pages are visited, how people find the site and roughly where visitors come from. "
+                     "Google Analytics sets cookies and collects data such as pages viewed, device and browser type, and approximate location. "
+                     "Google Analytics 4 doesn’t log or store IP addresses. If you click <strong>Reject</strong>, or don’t choose, Google Analytics "
+                     "isn’t loaded at all. You can change your choice any time using <strong>Cookie settings</strong> at the bottom of every page.</p>\n"
+                     "<p><strong>Legal basis:</strong> your consent.</p>")
+        short = "Google Analytics is only used if you accept cookies."
+        cookies = ("<p>This site only sets cookies if you accept analytics:</p>\n<table>\n"
+                   "<thead><tr><th>Name</th><th>Provider</th><th>Purpose</th><th>Expires</th></tr></thead>\n<tbody>\n"
+                   "<tr><td><code>_ga</code></td><td>Google Analytics</td><td>Distinguishes visitors</td><td>2 years</td></tr>\n"
+                   "<tr><td><code>_ga_*</code></td><td>Google Analytics</td><td>Keeps track of a visit</td><td>2 years</td></tr>\n"
+                   "</tbody>\n</table>\n"
+                   "<p>Your choice is saved in your browser’s local storage as <code>rn-consent</code> so the banner doesn’t appear on every page. "
+                   "The visitor counter uses session storage, which is cleared when you close the tab. "
+                   "To change your choice, use <strong>Cookie settings</strong> in the footer, or clear this site’s data in your browser.</p>")
+        processor = "<li><strong>Google (Google Analytics)</strong>, only if you accept analytics cookies.</li>"
+    else:
+        analytics = ("<h2>Analytics</h2>\n<p>This website doesn’t use Google Analytics or any other third-party analytics or "
+                     "advertising trackers. The only statistic collected is the visitor counter described above.</p>")
+        short = "This site doesn’t use cookies or third-party analytics."
+        cookies = ("<p><strong>This website doesn’t use cookies.</strong> That’s why you don’t see a cookie banner. "
+                   "The visitor counter uses your browser’s session storage, which never leaves your device "
+                   "and is cleared when you close the tab. If analytics is added in the future, it will only run after you "
+                   "agree to it, and this policy will be updated.</p>")
+        processor = ""
+    for k, v in {"[[ANALYTICS_SHORT]]": short, "[[ANALYTICS_PROCESSOR]]": processor, "[[ANALYTICS]]": analytics,
+                 "[[COOKIES]]": cookies, "[[NAME]]": NAME, "[[EMAIL]]": EMAIL,
+                 "[[SITE]]": SITE_URL.split("//", 1)[-1], "[[LOCATION]]": LOCATION}.items():
+        html = html.replace(k, v)
+    # give each h2 an id so sections can be linked (e.g. /privacy/#cookies-and-similar-technologies)
+    return re.sub(r"<h2>(.*?)</h2>", lambda m: f'<h2 id="{slugify(m.group(1))}">{m.group(1)}</h2>', html)
+
+
+def slugify(text):
+    return re.sub(r"[^a-z0-9]+", "-", re.sub(r"<[^>]+>", "", text).lower()).strip("-")
+
+
+def build_legal(path, kicker, h1, title, desc, html):
+    trail = [("Home", "/"), (kicker, path)]
+    body = f"""<section class="page-hero">
+  <div class="wrap">
+    {breadcrumbs_html(trail)}
+    <div class="kicker reveal">{kicker}</div>
+    <h1 class="reveal d1">{h1}</h1>
+    <div class="page-hero-row"><p class="reveal d2">Last updated <time datetime="{LEGAL_UPDATED}">{fmt_date(LEGAL_UPDATED)}</time></p></div>
+  </div>
+</section>
+<section style="padding-bottom:clamp(80px,10vw,140px)">
+  <div class="wrap"><div class="prose legal-prose">{legal_text(html)}</div></div>
+</section>"""
+    page = {"@type": "WebPage", "url": abs_url(path), "name": title, "dateModified": LEGAL_UPDATED}
+    render(path, title, desc, body, schema=[page, breadcrumbs_schema(trail)], with_cta=False,
+           priority="0.3", lastmod=LEGAL_UPDATED)
+
+
 def build_contact():
     trail = [("Home", "/"), ("Contact", "/contact/")]
     options = "".join(f'<option value="{esc(s["name"])}" data-slug="{s["slug"]}">{esc(s["name"])}</option>' for s in SERVICES)
@@ -1275,7 +1374,7 @@ def build_contact():
         <label>Project details<textarea name="message" rows="6" required placeholder="Goals, timeline, links to your current site or designs…"></textarea></label>
         <button class="btn btn-dark" type="submit">Send message {ARROW}</button>
         <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
-        <p class="form-note">Your message goes straight to my inbox. I reply within 24 hours.</p>
+        <p class="form-note">Your message goes straight to my inbox. I reply within 24 hours. See the <a class="ulink" href="/privacy/">privacy policy</a> for how your details are handled.</p>
       </form>
     </div>
   </div>
@@ -1326,7 +1425,7 @@ def build_html_sitemap():
     <div class="kicker reveal">Sitemap</div>
     <h1 class="reveal d1">Every page, <span class="serif">in one place.</span></h1>
     <div class="sm-grid">
-      {group("Main pages", [("Home", "/"), ("About", "/about/"), ("Services", "/services/"), ("Projects", "/projects/")] + ([("Plugins", "/plugins/")] if STORE_ON else []) + [("Blog", "/blog/"), ("Contact", "/contact/")])}
+      {group("Main pages", [("Home", "/"), ("About", "/about/"), ("Services", "/services/"), ("Projects", "/projects/")] + ([("Plugins", "/plugins/")] if STORE_ON else []) + [("Blog", "/blog/"), ("Contact", "/contact/"), ("Privacy policy", "/privacy/"), ("Terms of use", "/terms/")])}
       {group("Services", [(x["name"], f"/services/{x['slug']}/") for x in SERVICES])}
       {group("Blog", [(x["title"], f"/blog/{x['slug']}/") for x in sorted(POSTS, key=lambda x: x["date"], reverse=True)])}
       {group("Plugins", [(x["name"], f"/plugins/{x['slug']}/") for x in PLUGINS]) if HAS_PLUGINS else ""}
@@ -1553,6 +1652,10 @@ def main():
     for p in POSTS:
         build_post(p)
     build_contact()
+    build_legal("/privacy/", "Privacy", 'Privacy &amp; <span class="serif">cookies.</span>', f"Privacy & Cookie Policy | {NAME}",
+                f"How {NAME}'s website handles your personal data: contact messages, the visitor counter, cookies and your privacy rights.", PRIVACY)
+    build_legal("/terms/", "Terms", 'Terms of <span class="serif">use.</span>', f"Terms of Use | {NAME}",
+                f"Terms for using {NAME}'s website, articles and content, plus how project work and plugin licences are covered.", TERMS)
     build_404()
     build_html_sitemap()
     build_seo_files()

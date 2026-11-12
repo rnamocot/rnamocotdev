@@ -460,3 +460,41 @@
     });
   }
 })();
+
+/* ---------- Cookie consent (only rendered when GA4_ID is set in build.py) ---------- */
+(function () {
+  const banner = document.querySelector("[data-consent]");
+  if (!banner) return;
+  const KEY = "rn-consent";
+  let choice = null;
+  try { choice = localStorage.getItem(KEY); } catch (e) {}
+  const show = () => { banner.hidden = false; };
+  const hide = () => { banner.hidden = true; };
+  if (choice !== "granted" && choice !== "denied") show();
+
+  banner.addEventListener("click", (e) => {
+    const btn = e.target.closest("[data-consent-choice]");
+    if (!btn) return;
+    const value = btn.dataset.consentChoice;
+    const previous = choice;
+    choice = value;
+    try { localStorage.setItem(KEY, value); } catch (e) {}
+    hide();
+    if (typeof window.gtag === "function") {
+      window.gtag("consent", "update", { analytics_storage: value });
+    }
+    if (value === "granted" && window.rnLoadAnalytics) window.rnLoadAnalytics();
+    if (value === "denied" && previous === "granted") {
+      // remove Google Analytics cookies and reload so the script is no longer running
+      document.cookie.split(";").map((c) => c.split("=")[0].trim()).filter((n) => /^_ga/.test(n)).forEach((n) => {
+        const host = location.hostname.replace(/^www\./, "");
+        ["", "; domain=" + host, "; domain=." + host].forEach((d) => {
+          document.cookie = n + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/" + d;
+        });
+      });
+      location.reload();
+    }
+  });
+
+  document.querySelectorAll("[data-consent-open]").forEach((b) => b.addEventListener("click", show));
+})();

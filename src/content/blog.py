@@ -7,6 +7,259 @@ body as HTML. Use <h2> for main sections (they feed the table of contents).
 
 POSTS = [
     {
+        "slug": "n8n-automation-guide",
+        "seo_title": "How to Use n8n: Build Your First Automation",
+        "title": "How to Use n8n: A Practical Guide to Building Your First Automations",
+        "desc": "A hands-on n8n guide: cloud vs self-hosting, triggers, nodes, expressions, error handling and a step-by-step lead-capture workflow you can build today.",
+        "date": "2026-11-12",
+        "category": "Automation",
+        "img": "photo-1504384308090-c894fdcc538d",
+        "services": ["wordpress-automation", "custom-web-development", "woocommerce-development"],
+        "body": """
+<p class="tldr"><strong>Short answer:</strong> n8n is a visual workflow automation tool you can run in the cloud or host yourself. You build a workflow by connecting a <em>trigger</em> (a form submission, a schedule, a webhook) to a chain of <em>nodes</em> that transform data and call other apps. Its strengths are self-hosting, code when you need it, and predictable costs at high volume.</p>
+
+<h2>What is n8n and who is it for?</h2>
+<p>n8n (pronounced “n-eight-n”) is a node-based automation platform, similar in spirit to Zapier or Make, but with two big differences: you can self-host it on your own server, and you can drop into JavaScript or Python whenever the visual nodes aren’t enough. That makes it a good fit for:</p>
+<ul>
+<li><strong>Businesses with privacy requirements</strong> that want customer data to stay on infrastructure they control.</li>
+<li><strong>High-volume workflows</strong> where per-task pricing on other platforms gets expensive.</li>
+<li><strong>Developers and technical teams</strong> who want to call any API, write custom logic and version their workflows.</li>
+<li><strong>AI workflows</strong>, since n8n has built-in AI Agent, LLM and vector store nodes.</li>
+</ul>
+<p>n8n is “fair-code” under its Sustainable Use License: free to self-host for your own business use, with paid cloud and enterprise plans.</p>
+
+<h2>n8n Cloud vs self-hosting</h2>
+<table>
+<thead><tr><th></th><th>n8n Cloud</th><th>Self-hosted</th></tr></thead>
+<tbody>
+<tr><td>Setup</td><td>Sign up and start building</td><td>Docker on a VPS (DigitalOcean, Hetzner, AWS, etc.)</td></tr>
+<tr><td>Maintenance</td><td>Handled for you</td><td>You handle updates, backups and SSL</td></tr>
+<tr><td>Cost</td><td>Monthly plan based on executions</td><td>Server cost only for the community edition</td></tr>
+<tr><td>Data location</td><td>n8n’s infrastructure</td><td>Your server</td></tr>
+</tbody>
+</table>
+<p>To try self-hosting locally, Docker is the fastest route:</p>
+<pre><code>docker volume create n8n_data
+docker run -it --rm --name n8n -p 5678:5678 \\
+  -v n8n_data:/home/node/.n8n \\
+  docker.n8n.io/n8nio/n8n</code></pre>
+<p>Then open <code>http://localhost:5678</code>. For production, put it behind a reverse proxy with HTTPS, use PostgreSQL instead of the default SQLite, and back up your <code>N8N_ENCRYPTION_KEY</code>. Without it, your saved credentials can’t be decrypted.</p>
+
+<h2>The core concepts in five minutes</h2>
+<ul>
+<li><strong>Workflow:</strong> the canvas holding your automation. Each one starts with a trigger.</li>
+<li><strong>Trigger nodes:</strong> what starts a run. Common ones are <em>Webhook</em>, <em>Schedule Trigger</em>, <em>Form Trigger</em> and app triggers like “new WooCommerce order” or “new Gmail message”.</li>
+<li><strong>Action nodes:</strong> do something in an app, such as creating a CRM contact, sending a Slack message or adding a row to Google Sheets.</li>
+<li><strong>Logic nodes:</strong> <em>If</em>, <em>Switch</em>, <em>Merge</em>, <em>Loop Over Items</em>, <em>Wait</em> and <em>Edit Fields (Set)</em> shape the flow and the data.</li>
+<li><strong>Items:</strong> n8n passes data between nodes as a list of JSON items. Most nodes run once per item, which is how one workflow handles 1 or 1,000 records.</li>
+<li><strong>Expressions:</strong> pull data from earlier nodes with <code>{{ $json.email }}</code> or <code>{{ $('Webhook').item.json.name }}</code>.</li>
+<li><strong>Credentials:</strong> API keys and OAuth logins stored encrypted and reused across workflows.</li>
+</ul>
+
+<h2>Step by step: a WordPress lead-capture workflow</h2>
+<p>Here is a workflow I build often: a contact form on a WordPress site sends the enquiry to n8n, which qualifies it with AI, saves it, and alerts you.</p>
+<ol>
+<li><strong>Add a Webhook trigger.</strong> Set the method to POST and copy the test URL. In your form plugin (Gravity Forms, Fluent Forms, WPForms or Contact Form 7 with a webhook add-on), send submissions to that URL.</li>
+<li><strong>Listen for a test event.</strong> Click “Listen for test event”, submit your form once, and n8n shows the incoming fields. Now every later node can reference them.</li>
+<li><strong>Clean the data with Edit Fields.</strong> Map only what you need: name, email, budget and message. Trim whitespace and lowercase the email.</li>
+<li><strong>Classify with AI.</strong> Add an OpenAI, Anthropic or Basic LLM Chain node and ask it to return JSON such as <code>{"score": 1-5, "type": "website|seo|support", "summary": "..."}</code>. Turn on structured output so the result is always parseable.</li>
+<li><strong>Branch with If or Switch.</strong> Leads scoring 4 or 5 go one way; everything else goes another.</li>
+<li><strong>Save and notify.</strong> Create the contact in your CRM (HubSpot, Pipedrive, or a Google Sheet to start), then send hot leads to Slack or email with the AI summary.</li>
+<li><strong>Reply to the webhook.</strong> Use a <em>Respond to Webhook</em> node so the form gets a fast success response.</li>
+<li><strong>Activate it.</strong> Switch the form to the <em>production</em> webhook URL and activate (publish) the workflow. Test URLs only work while the editor is listening.</li>
+</ol>
+
+<h2>Error handling: the part most tutorials skip</h2>
+<p>Automations fail: an API times out, a token expires, a field arrives empty. Build for it from day one:</p>
+<ul>
+<li><strong>Create an error workflow</strong> that starts with an <em>Error Trigger</em> node and emails or messages you the workflow name, failing node and error. Assign it in each workflow’s settings.</li>
+<li><strong>Turn on “Retry on fail”</strong> for nodes that call external APIs, with a short wait between tries.</li>
+<li><strong>Use “Continue on error”</strong> only where a failure is acceptable, and route the error output somewhere visible.</li>
+<li><strong>Check executions.</strong> The Executions list shows every run with the data at each node, which makes debugging fast.</li>
+</ul>
+
+<h2>Tips for workflows that last</h2>
+<ul>
+<li><strong>One workflow, one job.</strong> Split big automations into smaller ones and call them with the <em>Execute Workflow</em> node.</li>
+<li><strong>Name every node</strong> (“Score lead with AI”, not “OpenAI1”). Your expressions and your future self will thank you.</li>
+<li><strong>Use the HTTP Request node</strong> for any app without a built-in node. If it has an API, n8n can talk to it.</li>
+<li><strong>Use the Code node sparingly</strong>, for transformations that would otherwise take five visual nodes.</li>
+<li><strong>Keep secrets in credentials</strong>, never hard-coded in nodes or expressions.</li>
+<li><strong>Export workflows as JSON</strong> and keep them in Git so you can review changes and roll back.</li>
+</ul>
+
+<h2>Five n8n automations worth building first</h2>
+<ol>
+<li>Form enquiries to CRM, with AI lead scoring and Slack alerts.</li>
+<li>New WooCommerce orders to Google Sheets, accounting software and a personalised thank-you email.</li>
+<li>A daily digest of support emails grouped by topic, with draft replies.</li>
+<li>New blog posts turned into draft social posts and a newsletter section for approval.</li>
+<li>Uptime and form monitoring that alerts you when your site or contact form stops working.</li>
+</ol>
+<p>Not sure whether n8n or Make suits you better? Read my <a href="/blog/make-automation-guide/">guide to Make</a> or the broader <a href="/blog/ai-automation-for-small-business/">AI automation guide for small businesses</a>. If you’d rather have it built for you, see my <a href="/services/wordpress-automation/">automation services</a> or <a href="/contact/">tell me about your workflow</a>.</p>
+""",
+    },
+    {
+        "slug": "make-automation-guide",
+        "seo_title": "Make.com Tutorial: Build Automation Scenarios",
+        "title": "Make.com Tutorial: How to Build Automation Scenarios That Actually Work",
+        "desc": "Learn Make (formerly Integromat): scenarios, modules, routers, filters, iterators, error handlers and a step-by-step WooCommerce order workflow.",
+        "date": "2026-11-12",
+        "category": "Automation",
+        "img": "photo-1461749280684-dccba630e2f6",
+        "services": ["wordpress-automation", "woocommerce-development", "shopify-development"],
+        "body": """
+<p class="tldr"><strong>Short answer:</strong> Make (formerly Integromat) is a visual automation platform where you drag modules onto a canvas to build “scenarios” that move data between apps. It shines for complex, multi-branch workflows that non-developers still need to understand. Plan your data flow first, use routers and filters for logic, and add error handlers before you go live.</p>
+
+<h2>What is Make and when should you use it?</h2>
+<p>Make is a cloud-based, no-code automation tool with thousands of app integrations. Its visual canvas shows exactly how data flows from one step to the next, which makes it easier to follow than a linear list of steps. Make is a strong choice when:</p>
+<ul>
+<li>Your workflow has <strong>several branches</strong> or conditions (for example, different actions per product or lead type).</li>
+<li>You need to <strong>process lists</strong>: every line item in an order, every row in a sheet, every attachment in an email.</li>
+<li>Your team wants a <strong>visual tool they can maintain</strong> without writing code.</li>
+<li>You don’t want to host or maintain servers.</li>
+</ul>
+<p>If you need self-hosting or very high volume, compare it with <a href="/blog/n8n-automation-guide/">n8n</a>. For simple two-step automations, Zapier is often quickest to set up.</p>
+
+<h2>Key Make concepts</h2>
+<ul>
+<li><strong>Scenario:</strong> a complete automation, the equivalent of a “Zap” or n8n workflow.</li>
+<li><strong>Modules:</strong> individual steps. <em>Triggers</em> start the scenario, <em>actions</em> create or update data, <em>searches</em> look data up.</li>
+<li><strong>Instant vs polling triggers:</strong> instant triggers (webhooks) run the moment something happens; polling triggers check for new data on a schedule, such as every 15 minutes.</li>
+<li><strong>Bundles:</strong> each record that flows through a scenario. One new order is one bundle.</li>
+<li><strong>Mapping:</strong> click fields from earlier modules to insert them into later ones, and use built-in functions to format dates, text and numbers.</li>
+<li><strong>Credits:</strong> Make bills by usage. Most module runs consume credits (previously called operations), so efficient design directly lowers your bill.</li>
+</ul>
+
+<h2>Routers, filters, iterators and aggregators</h2>
+<p>These four tools are what make Make powerful:</p>
+<table>
+<thead><tr><th>Tool</th><th>What it does</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td>Router</td><td>Splits one flow into several branches</td><td>Send B2B and retail orders down different paths</td></tr>
+<tr><td>Filter</td><td>Lets a bundle continue only if conditions match</td><td>Only orders over $200 trigger a VIP email</td></tr>
+<tr><td>Iterator</td><td>Turns an array into separate bundles</td><td>Process each line item in an order individually</td></tr>
+<tr><td>Aggregator</td><td>Combines bundles back into one</td><td>Build one summary email from many rows</td></tr>
+</tbody>
+</table>
+<p>Add a fallback route to your routers so bundles that match no condition are still handled instead of silently dropped.</p>
+
+<h2>Step by step: a WooCommerce order workflow</h2>
+<p>This scenario records every new order, alerts the team about large orders and sends customers a personalised follow-up.</p>
+<ol>
+<li><strong>Create a scenario</strong> and add the <em>WooCommerce: Watch Orders</em> trigger, or a <em>Custom Webhook</em> connected to a WooCommerce webhook for instant runs. Connect your store with REST API keys from WooCommerce → Settings → Advanced.</li>
+<li><strong>Run once</strong> and place a test order, so Make learns the data structure and you can map fields.</li>
+<li><strong>Add a Google Sheets “Add a Row” module</strong> and map order number, date, customer, total and status.</li>
+<li><strong>Add a router</strong> with two routes. Route one gets a filter: <em>Total greater than 200</em>. Route two is the fallback.</li>
+<li><strong>Route one:</strong> post a Slack message to your sales channel with the order details and a link to the order.</li>
+<li><strong>Both routes:</strong> add an AI module (OpenAI, Anthropic Claude or Make AI) to draft a short thank-you message based on the products ordered, then send it with Gmail, Brevo or Mailchimp after a delay.</li>
+<li><strong>Schedule it.</strong> Instant webhooks run immediately; for polling triggers, choose a sensible interval. Then switch the scenario on.</li>
+</ol>
+
+<h2>Error handling in Make</h2>
+<p>Right-click any module and choose <em>Add error handler</em>. Make gives you five directives:</p>
+<ul>
+<li><strong>Resume:</strong> substitute a fallback value and continue.</li>
+<li><strong>Ignore:</strong> skip the failed bundle and carry on.</li>
+<li><strong>Break:</strong> stop, store the run as an incomplete execution and retry it later automatically.</li>
+<li><strong>Commit:</strong> stop, but keep the changes already made.</li>
+<li><strong>Rollback:</strong> stop and undo changes where the apps support it.</li>
+</ul>
+<p>For API calls that can time out, <em>Break</em> with automatic retries is usually the right choice. Also enable email notifications for failed scenarios so problems don’t go unnoticed.</p>
+
+<h2>How to keep Make costs down</h2>
+<ul>
+<li><strong>Filter early.</strong> Put filters right after the trigger so irrelevant bundles stop before they use credits.</li>
+<li><strong>Prefer webhooks over frequent polling.</strong> A polling trigger that runs every minute uses credits even when nothing changed.</li>
+<li><strong>Aggregate before sending.</strong> One summary email instead of fifty individual messages.</li>
+<li><strong>Use data stores</strong> to remember what you’ve already processed and avoid duplicates.</li>
+<li><strong>Review scenario history</strong> monthly to find the scenarios using the most credits.</li>
+</ul>
+
+<h2>Make vs n8n vs Zapier at a glance</h2>
+<table>
+<thead><tr><th></th><th>Make</th><th>n8n</th><th>Zapier</th></tr></thead>
+<tbody>
+<tr><td>Best for</td><td>Visual, branching workflows</td><td>Self-hosting, code, high volume</td><td>Quick, simple automations</td></tr>
+<tr><td>Hosting</td><td>Cloud only</td><td>Cloud or self-hosted</td><td>Cloud only</td></tr>
+<tr><td>Learning curve</td><td>Moderate</td><td>Moderate to technical</td><td>Easiest</td></tr>
+<tr><td>Pricing model</td><td>Credits per module run</td><td>Executions (cloud) or server cost</td><td>Tasks per action</td></tr>
+</tbody>
+</table>
+<p>I build Make and n8n automations connected to WordPress, WooCommerce, Shopify and CRMs. <a href="/services/wordpress-automation/">See automation services</a> or <a href="/contact/">describe the workflow you want to automate</a>.</p>
+""",
+    },
+    {
+        "slug": "why-wordpress-is-best-for-seo",
+        "seo_title": "Why WordPress Is the Best CMS for SEO in 2026",
+        "title": "Why WordPress Is the Best Choice for SEO (and When It Isn't)",
+        "desc": "Why WordPress is still the best CMS for SEO in 2026: full control over URLs, metadata, schema and speed, a mature plugin ecosystem, and content you own.",
+        "date": "2026-11-11",
+        "category": "SEO",
+        "img": "photo-1498050108023-c5249f4df085",
+        "services": ["wordpress-development", "technical-seo-analytics", "custom-wordpress-theme-development"],
+        "body": """
+<p class="tldr"><strong>Short answer:</strong> WordPress is the best choice for SEO for most businesses because it gives you full control over everything search engines care about (URLs, titles, structured data, site speed, internal linking and content) while staying easy to publish with. It powers over 40% of all websites, so its SEO tooling is the most mature on the web. The catch: those advantages only show up when the site is built well.</p>
+
+<h2>1. You control every on-page SEO element</h2>
+<p>Many hosted website builders lock parts of your SEO behind templates. With WordPress you can edit, per page:</p>
+<ul>
+<li>The <strong>SEO title and meta description</strong></li>
+<li>The <strong>URL slug</strong> and your overall permalink structure</li>
+<li><strong>Canonical tags</strong>, <strong>noindex</strong> settings and redirects</li>
+<li>Heading structure, image alt text and Open Graph tags for social sharing</li>
+</ul>
+<p>Plugins such as Yoast SEO, Rank Math and SEOPress put these controls right in the editor, with previews of how your page appears in search results.</p>
+
+<h2>2. Clean, flexible URLs and site structure</h2>
+<p>WordPress lets you use readable URLs like <code>/services/web-design/</code> instead of <code>/page?id=482</code>. You can organise content with pages, posts, categories, tags and custom post types, which makes it easy to build the hub-and-spoke structure that shows search engines you cover a topic in depth.</p>
+
+<h2>3. Structured data without hand-coding</h2>
+<p>Schema markup helps Google and AI assistants understand who you are and what each page is about. WordPress SEO plugins generate <code>Article</code>, <code>Organization</code>, <code>BreadcrumbList</code>, <code>Product</code> and <code>FAQPage</code> markup automatically, and custom themes can output exactly the schema your business needs. That matters more than ever as AI Overviews and assistants decide which sources to cite. For more, see <a href="/blog/wordpress-seo-ai-search-2026/">WordPress SEO for Google and AI search</a>.</p>
+
+<h2>4. It’s built for publishing content</h2>
+<p>SEO rewards sites that publish helpful content consistently. WordPress started as a blogging platform, and it’s still the easiest way for a team to draft, schedule, update and organise content. Revisions, scheduled publishing, multiple authors with author pages, and the block editor all make it simple to keep content fresh, which is a real ranking advantage.</p>
+
+<h2>5. Speed is in your hands</h2>
+<p>Core Web Vitals are part of Google’s page experience signals. Because you choose the hosting, theme, caching and image handling, a WordPress site can be extremely fast. A lightweight custom theme, good hosting, page caching, a CDN and WebP/AVIF images regularly score in the green. On closed platforms, you’re limited to whatever the platform’s templates allow.</p>
+
+<h2>6. The biggest SEO ecosystem on the web</h2>
+<p>Whatever you need, there is a well-maintained tool for it: XML sitemaps (built into core since WordPress 5.5), redirect managers, broken-link checkers, image optimisers, multilingual SEO with hreflang (WPML, Polylang), local SEO and WooCommerce product schema. Google’s own Site Kit plugin connects Search Console and Analytics directly to your dashboard.</p>
+
+<h2>7. You own your site and your content</h2>
+<p>WordPress is open source. You can move hosts, change designs or rebuild your theme without losing your URLs, content or rankings. With proprietary builders, leaving often means rebuilding from scratch and risking traffic loss during migration.</p>
+
+<h2>8. It scales from a blog to e-commerce and headless</h2>
+<p>The same platform supports a five-page brochure site, a WooCommerce store with thousands of products, or a <a href="/blog/headless-wordpress-nextjs-guide/">headless WordPress</a> front end built with Next.js. You don’t have to switch CMS, and lose SEO history, as your business grows.</p>
+
+<h2>Where WordPress SEO goes wrong</h2>
+<p>WordPress doesn’t guarantee rankings. Most WordPress sites that struggle in search have the same problems:</p>
+<ul>
+<li><strong>Bloated themes and page builders</strong> loading heavy scripts on every page. (See <a href="/blog/elementor-vs-custom-wordpress-theme/">Elementor vs a custom theme</a>.)</li>
+<li><strong>Too many plugins</strong>, including several that overlap.</li>
+<li><strong>Thin archive pages</strong> such as tag and author archives that get indexed with no unique content.</li>
+<li><strong>Cheap hosting</strong> with slow server response times.</li>
+<li><strong>Neglected updates</strong> that leave the site open to hacks and spam injections, which can destroy rankings overnight.</li>
+</ul>
+
+<h2>When WordPress might not be the best fit</h2>
+<p>To be fair, WordPress isn’t always the answer. If you mainly sell products and want hosting, checkout and security fully managed, <a href="/blog/shopify-vs-woocommerce-2026/">Shopify</a> may suit you better. A one-page site that will never publish content may not need a CMS at all. But for businesses that want to grow organic traffic through content, services pages and local SEO, WordPress remains the most flexible and future-proof choice.</p>
+
+<h2>WordPress SEO quick-start checklist</h2>
+<ol>
+<li>Choose fast, reputable hosting and a lightweight theme.</li>
+<li>Set permalinks to “Post name” before publishing.</li>
+<li>Install one SEO plugin and configure titles, sitemaps and schema.</li>
+<li>Connect Google Search Console and Bing Webmaster Tools, and submit your sitemap.</li>
+<li>Noindex thin archives you don’t need.</li>
+<li>Compress images and enable caching.</li>
+<li>Build service pages and supporting articles that link to each other.</li>
+<li>Keep WordPress, themes and plugins updated.</li>
+</ol>
+<p>Want a WordPress site built for search from day one? See <a href="/services/wordpress-development/">WordPress development</a> and <a href="/services/technical-seo-analytics/">technical SEO</a>, or <a href="/contact/">request an SEO audit</a>.</p>
+""",
+    },
+    {
         "slug": "mytindahan-sari-sari-store-app",
         "seo_title": "MyTindahan: A Store App for Sari-Sari Stores",
         "title": "Building MyTindahan: A Simple Store App for Sari-Sari, Grocery and Convenience Stores",
